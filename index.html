@@ -16,8 +16,11 @@
  --gold-light:#f0c77d;
  --cream:#f6f1e8;
  --white:#fff;
- --muted:#77716a;
- --line:#e8e0d5;
+ --muted:#68736e;
+ --line:#dce4df;
+ --trust:#28685e;
+ --trust-dark:#183f39;
+ --trust-light:#e4f0ec;
  --green:#20a45b;
 }
 
@@ -33,6 +36,7 @@ body {
  color:var(--black);
  background:#fff;
  font-family:Arial,Helvetica,sans-serif;
+ font-size:16px;
  -webkit-font-smoothing:antialiased;
 }
 
@@ -47,22 +51,6 @@ img { max-width:100%;display:block; }
 }
 
 /* HEADER */
-
-.announcement {
- background:var(--black);
- color:#e7ded2;
- font-size:11px;
- letter-spacing:.07em;
- padding:9px 0;
-}
-
-.announcement .wrap {
- display:flex;
- justify-content:space-between;
- gap:15px;
-}
-
-.announcement strong { color:var(--gold-light); }
 
 header {
  position:sticky;
@@ -81,8 +69,9 @@ header {
 }
 
 .logo img {
- width:148px;
- height:65px;
+ width:172px;
+ height:70px;
+ margin-left:8px;
  object-fit:contain;
  object-position:left center;
 }
@@ -91,7 +80,7 @@ header {
  display:flex;
  align-items:center;
  gap:24px;
- font-size:13px;
+ font-size:14px;
  font-weight:700;
 }
 
@@ -123,7 +112,8 @@ header {
  border:1px solid var(--line);
  background:#fff;
  padding:10px 12px;
- font-size:12px;
+ border-radius:5px;
+ font-size:13px;
  font-weight:800;
 }
 
@@ -138,6 +128,7 @@ header {
  font-weight:800;
  letter-spacing:.035em;
  text-transform:uppercase;
+ border-radius:5px;
  transition:.2s;
 }
 
@@ -169,14 +160,17 @@ header {
 /* HERO */
 
 .hero {
- min-height:min(780px,calc(100svh - 85px));
- height:720px;
- max-height:850px;
+ min-height:520px;
+ height:min(650px,calc(100svh - 76px));
+ max-height:720px;
+ margin:12px 18px 0;
+ padding:0;
+ border-radius:12px;
  background:#26211c;
  position:relative;
  color:#fff;
  display:flex;
- align-items:flex-end;
+ align-items:center;
  overflow:hidden;
 }
 
@@ -184,8 +178,8 @@ header {
  position:absolute;
  inset:0;
  background-image:
-  linear-gradient(90deg,rgba(13,12,11,.88) 0%,rgba(13,12,11,.64) 42%,rgba(13,12,11,.10) 100%),
-  linear-gradient(0deg,rgba(10,9,8,.58),transparent 55%),
+   linear-gradient(90deg,rgba(13,25,22,.86) 0%,rgba(13,25,22,.58) 44%,rgba(13,25,22,.08) 100%),
+   linear-gradient(0deg,rgba(10,20,17,.50),transparent 58%),
   url('photos/hero.jpg');
  background-position:center;
  background-size:cover;
@@ -200,13 +194,13 @@ header {
  position:relative;
  z-index:2;
  width:100%;
- padding:90px 0 82px;
+ padding:60px 0;
 }
 
-.hero-copy { max-width:690px; }
+.hero-copy { max-width:730px; }
 
 h1 {
- font-size:clamp(46px,6.2vw,82px);
+ font-size:clamp(50px,6.4vw,86px);
  line-height:.98;
  letter-spacing:-.055em;
  font-weight:900;
@@ -218,7 +212,7 @@ h1 {
 h1 span { color:var(--gold-light); }
 
 .hero-copy p {
- font-size:16px;
+ font-size:17px;
  line-height:1.7;
  color:#eee8df;
  max-width:520px;
@@ -238,6 +232,12 @@ h1 span { color:var(--gold-light); }
  margin-top:38px;
  color:#e0d7cb;
  font-size:12px;
+ background:#10231f99;
+ border:1px solid #ffffff30;
+ border-radius:6px;
+ width:max-content;
+ max-width:100%;
+ padding:10px 13px;
 }
 
 .hero-meta strong { color:white; }
@@ -264,8 +264,8 @@ h1 span { color:var(--gold-light); }
 /* PROOF STRIP */
 
 .quick-proof {
- background:var(--gold);
- color:#17120d;
+ background:var(--trust);
+ color:#fff;
 }
 
 .proof-grid {
@@ -275,7 +275,7 @@ h1 span { color:var(--gold-light); }
 
 .proof {
  padding:20px 24px;
- border-right:1px solid #1715132b;
+ border-right:1px solid #ffffff30;
  display:flex;
  align-items:center;
  justify-content:center;
@@ -287,7 +287,7 @@ h1 span { color:var(--gold-light); }
 }
 
 .proof:last-child { border:0; }
-.proof b { font-size:23px;font-weight:900; }
+.proof b { font-size:25px;font-weight:900;color:var(--gold-light); }
 
 /* GENERAL SECTIONS */
 
@@ -312,7 +312,7 @@ h2 {
 }
 
 .section-intro {
- font-size:14px;
+ font-size:15px;
  line-height:1.75;
  color:var(--muted);
  max-width:420px;
@@ -326,20 +326,20 @@ h2 {
 .service-grid {
  display:grid;
  grid-template-columns:repeat(3,1fr);
- border-top:1px solid var(--line);
- border-left:1px solid var(--line);
+ gap:12px;
 }
 
 .service {
- min-height:205px;
+ min-height:210px;
  padding:27px 26px;
- border-right:1px solid var(--line);
- border-bottom:1px solid var(--line);
+ border:1px solid var(--line);
+ border-radius:8px;
+ background:#fff;
  position:relative;
  transition:.2s;
 }
 
-.service:hover { background:#fbf7f0; }
+.service:hover { background:var(--trust-light);border-color:#b8d2ca; }
 
 .service .num {
  font-size:11px;
@@ -357,7 +357,7 @@ h2 {
 }
 
 .service p {
- font-size:13px;
+ font-size:14px;
  color:var(--muted);
  line-height:1.65;
  margin:0;
@@ -433,7 +433,8 @@ h2 {
  min-height:500px;
  position:relative;
  background:#e4d8c6;
- border:12px solid #fff;
+ border:8px solid #fff;
+ border-radius:8px;
  box-shadow:0 18px 45px #34271918;
  display:grid;
  place-items:center;
@@ -557,7 +558,7 @@ h2 {
 /* PORTFOLIO */
 
 .portfolio {
- background:var(--black);
+ background:var(--trust-dark);
  color:#fff;
 }
 
@@ -578,12 +579,14 @@ h2 {
 }
 
 .filter {
- border:1px solid #5a5045;
+ border:1px solid #668079;
  background:transparent;
  color:#e7ded2;
  padding:10px 14px;
- font-size:11px;
+ border-radius:999px;
+ font-size:12px;
  font-weight:800;
+ transition:background .2s,border-color .2s,color .2s;
 }
 
 .filter.active,.filter:hover {
@@ -599,47 +602,111 @@ h2 {
 }
 
 .gallery {
- display:grid;
- grid-template-columns:repeat(3,minmax(0,1fr));
- gap:14px;
+ position:relative;
 }
 
 .gallery-card {
  margin:0;
  min-width:0;
- background:#29231d;
+ background:#20433d;
  overflow:hidden;
- cursor:pointer;
+ border-radius:8px;
+ box-shadow:0 16px 38px #071b1740;
+ animation:gallery-enter .42s ease both;
+}
+
+@keyframes gallery-enter {
+ from { opacity:0;transform:translateX(14px); }
+ to { opacity:1;transform:translateX(0); }
+}
+
+.gallery-frame {
+ position:relative;
+ overflow:hidden;
+ background:#20433d;
+}
+
+.gallery-open {
+ display:block;
+ width:100%;
+ padding:0;
+ border:0;
+ background:transparent;
+ color:inherit;
+ cursor:zoom-in;
 }
 
 .gallery-image {
  width:100%;
- aspect-ratio:4/3;
+ aspect-ratio:16/8.5;
  object-fit:cover;
- background:#332b22;
- transition:transform .4s;
+ background:#20433d;
+ transition:transform .65s;
  display:block;
 }
 
-.gallery-card:hover .gallery-image { transform:scale(1.035); }
+.gallery-open:hover .gallery-image { transform:scale(1.025); }
+
+.gallery-arrow {
+ position:absolute;
+ top:50%;
+ width:46px;
+ height:46px;
+ display:grid;
+ place-items:center;
+ transform:translateY(-50%);
+ border:1px solid #ffffff75;
+ border-radius:50%;
+ background:#10231fcc;
+ color:#fff;
+ font-size:27px;
+ line-height:1;
+ transition:background .2s,transform .2s;
+}
+
+.gallery-arrow:hover {
+ background:var(--trust);
+ transform:translateY(-50%) scale(1.06);
+}
+
+.gallery-prev { left:16px; }
+.gallery-next { right:16px; }
+
+[dir="rtl"] .gallery-prev { left:auto;right:16px; }
+[dir="rtl"] .gallery-next { right:auto;left:16px; }
 
 .gallery-caption {
- padding:13px 15px 15px;
+ padding:16px 20px;
  display:flex;
  align-items:center;
  justify-content:space-between;
  gap:12px;
+ min-height:72px;
 }
 
+.gallery-caption div { min-width:0; }
+
 .gallery-caption strong {
- font-size:12px;
+ display:block;
+ font-size:15px;
  text-transform:uppercase;
  letter-spacing:.025em;
 }
 
 .gallery-caption span {
- font-size:10px;
+ display:block;
+ margin-top:4px;
+ font-size:12px;
  color:var(--gold-light);
+}
+
+.gallery-index {
+ flex:0 0 auto;
+ padding:7px 10px;
+ border:1px solid #ffffff35;
+ border-radius:5px;
+ font-size:12px;
+ color:#fff;
 }
 
 .gallery-empty {
@@ -689,6 +756,7 @@ h2 {
  place-items:center;
  position:relative;
  overflow:hidden;
+ border-radius:8px;
 }
 
 .about-visual:before {
@@ -765,6 +833,7 @@ h2 {
  background:#fff;
  padding:28px;
  border:1px solid #e5dbcd;
+ border-radius:8px;
 }
 
 .contact-line {
@@ -815,6 +884,8 @@ h2 {
 .map-wrap {
  margin-top:17px;
  background:#e5ded3;
+ overflow:hidden;
+ border-radius:8px;
 }
 
 .map-wrap iframe {
@@ -971,11 +1042,11 @@ footer {
  .wrap { width:min(100% - 36px,760px); }
 
  .nav { height:68px; }
- .logo img { width:125px;height:58px; }
+ .logo img { width:145px;height:60px; }
  .nav-links { gap:13px;font-size:11px; }
  .nav-actions .nav-quote { display:none; }
 
- .hero { height:680px;min-height:620px; }
+ .hero { height:620px;min-height:520px; }
  .hero-photo { background-position:58% center; }
  .hero-content { padding:70px 0; }
 
@@ -994,8 +1065,6 @@ footer {
   order:2;
  }
 
- .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
-
  .fabric-board { min-height:420px; }
 }
 
@@ -1004,25 +1073,25 @@ footer {
 @media(max-width:600px) {
  .wrap { width:calc(100% - 30px); }
 
- .announcement { font-size:9px; }
- .announcement .wrap span:last-child { display:none; }
-
  .nav { height:61px; }
- .logo img { width:105px;height:51px; }
+ .logo img { width:124px;height:54px; }
+ .logo { margin-right:4px; }
  .nav-links { display:none; }
 
  .lang { padding:9px 11px; }
 
  .hero {
-  height:calc(88svh - 61px);
-  min-height:570px;
-  max-height:760px;
+  height:calc(84svh - 61px);
+  min-height:520px;
+  max-height:700px;
+  margin:8px 10px 0;
+  border-radius:10px;
   align-items:flex-end;
  }
 
  .hero-photo {
   background-image:
-   linear-gradient(0deg,rgba(10,9,8,.92) 0%,rgba(10,9,8,.58) 46%,rgba(10,9,8,.12) 100%),
+   linear-gradient(0deg,rgba(10,20,17,.92) 0%,rgba(10,20,17,.60) 48%,rgba(10,20,17,.14) 100%),
    url('photos/hero.jpg');
   background-position:center;
   background-size:cover;
@@ -1032,7 +1101,7 @@ footer {
   background-image:linear-gradient(145deg,#171513,#3d2c1b);
  }
 
- .hero-content { padding:50px 0 54px; }
+ .hero-content { padding:35px 0 40px; }
 
  h1 {
   font-size:clamp(42px,12vw,60px);
@@ -1041,7 +1110,7 @@ footer {
  }
 
  .hero-copy p {
-  font-size:13px;
+   font-size:14px;
   line-height:1.65;
   max-width:350px;
   margin-bottom:21px;
@@ -1062,6 +1131,7 @@ footer {
   font-size:10px;
   gap:10px;
   margin-top:24px;
+   padding:8px 10px;
  }
 
  .hero-scroll { display:none; }
@@ -1151,7 +1221,7 @@ footer {
  .filter {
   white-space:nowrap;
   padding:10px 12px;
-  font-size:10px;
+   font-size:11px;
  }
 
  .count {
@@ -1159,28 +1229,31 @@ footer {
   margin-top:7px;
  }
 
- .gallery {
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:8px;
+ .gallery-image { aspect-ratio:4/3; }
+
+ .gallery-arrow {
+  width:40px;
+  height:40px;
  }
 
- .gallery-image { aspect-ratio:1/1; }
+ .gallery-prev { left:10px; }
+ .gallery-next { right:10px; }
+
+ [dir="rtl"] .gallery-prev { left:auto;right:10px; }
+ [dir="rtl"] .gallery-next { right:auto;left:10px; }
 
  .gallery-caption {
-  padding:9px 9px 11px;
-  display:block;
+  padding:12px 13px;
+  min-height:64px;
  }
 
  .gallery-caption strong {
-  display:block;
-  font-size:9px;
+  font-size:12px;
   line-height:1.3;
  }
 
  .gallery-caption span {
-  display:block;
-  margin-top:4px;
-  font-size:9px;
+  font-size:10px;
  }
 
  .gallery-empty {
@@ -1259,13 +1332,6 @@ footer {
 
 <body>
 
-<div class="announcement">
- <div class="wrap">
-  <span><strong>COMFY SEAT</strong> — ATELIER DE TAPISSERIE</span>
-  <span>BARAKI · ALGER · ALGÉRIE</span>
- </div>
-</div>
-
 <header>
  <div class="wrap nav">
 
@@ -1278,7 +1344,7 @@ footer {
    <a href="#tissus" data-fr="Tissus" data-ar="الأقمشة">Tissus</a>
    <a href="#realisations" data-fr="Réalisations" data-ar="أعمالنا">Réalisations</a>
    <a href="#atelier" data-fr="Atelier" data-ar="الورشة">Atelier</a>
-   <a href="#contact" data-fr="Contact" data-ar="اتصل بنا">Contact</a>
+  <a href="#contact" data-fr="Contact" data-ar="تواصلوا معانا">Contact</a>
   </nav>
 
   <div class="nav-actions">
@@ -1286,7 +1352,7 @@ footer {
    <a class="btn btn-dark nav-quote"
       href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20souhaite%20un%20devis."
       data-fr="Devis WhatsApp"
-      data-ar="عرض سعر عبر واتساب">Devis WhatsApp</a>
+      data-ar="اطلبو السعر عبر واتساب">Devis WhatsApp</a>
   </div>
 
  </div>
@@ -1296,7 +1362,7 @@ footer {
 
 <!-- HERO -->
 
-<section class="hero no-photo" id="home">
+<section class="hero" id="home">
  <div class="hero-photo"></div>
 
  <div class="wrap hero-content">
@@ -1304,13 +1370,13 @@ footer {
 
    <h1
     data-fr="ON REDONNE<br>VIE À VOTRE<br><span>SALON.</span>"
-    data-ar="نعيد الحياة<br>إلى صالونكم<br><span>من جديد.</span>">
+    data-ar="نردّو الروح<br>لصالونكم<br><span>من جديد.</span>">
     ON REDONNE<br>VIE À VOTRE<br><span>SALON.</span>
    </h1>
 
    <p
     data-fr="Fabrication de salons sur mesure et rénovation de canapés, fauteuils et chaises. Un travail adapté à votre intérieur, à vos envies et à votre budget."
-    data-ar="صناعة أرائك حسب الطلب وتجديد الكنب والكراسي. عمل يناسب منزلكم وذوقكم وميزانيتكم.">
+    data-ar="نصنعو صالونات على القياس ونجددو الكنابيهات والكراسي. الخدمة على حساب داركم وذوقكم والميزانية تاعكم.">
     Fabrication de salons sur mesure et rénovation de canapés, fauteuils et chaises. Un travail adapté à votre intérieur, à vos envies et à votre budget.
    </p>
 
@@ -1318,16 +1384,16 @@ footer {
     <a class="btn btn-gold"
        href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20souhaite%20un%20devis."
        data-fr="Demander un devis ↗"
-       data-ar="اطلب عرض سعر ↗">Demander un devis ↗</a>
+      data-ar="سقسيونا على السعر ↗">Demander un devis ↗</a>
 
     <a class="btn btn-line"
        href="#realisations"
        data-fr="Voir les réalisations"
-       data-ar="شاهد الأعمال">Voir les réalisations</a>
+      data-ar="شوفو خدمتنا">Voir les réalisations</a>
    </div>
 
    <div class="hero-meta">
-    <strong data-fr="11 ANS D’EXPÉRIENCE" data-ar="11 سنة خبرة">11 ANS D’EXPÉRIENCE</strong>
+    <strong data-fr="11 ANS D’EXPÉRIENCE" data-ar="11 عام خبرة">11 ANS D’EXPÉRIENCE</strong>
     <i></i>
     <span>BARAKI · ALGER</span>
    </div>
@@ -1335,7 +1401,7 @@ footer {
   </div>
  </div>
 
- <div class="hero-scroll" data-fr="DÉFILER POUR DÉCOUVRIR ↓" data-ar="اكتشف المزيد ↓">
+ <div class="hero-scroll" data-fr="DÉFILER POUR DÉCOUVRIR ↓" data-ar="هبطو واكتشفو ↓">
   DÉFILER POUR DÉCOUVRIR ↓
  </div>
 </section>
@@ -1346,17 +1412,17 @@ footer {
  <div class="wrap proof-grid">
   <div class="proof">
    <b>11+</b>
-   <span data-fr="Années d’expérience" data-ar="سنوات من الخبرة">Années d’expérience</span>
+  <span data-fr="Années d’expérience" data-ar="سنين خبرة">Années d’expérience</span>
   </div>
 
   <div class="proof">
    <b>01</b>
-   <span data-fr="Devis adapté à chaque projet" data-ar="عرض سعر لكل مشروع">Devis adapté à chaque projet</span>
+  <span data-fr="Devis adapté à chaque projet" data-ar="السعر على حساب كل مشروع">Devis adapté à chaque projet</span>
   </div>
 
   <div class="proof">
    <b>⌖</b>
-   <span data-fr="Atelier à Baraki, Alger" data-ar="ورشة في براقي، الجزائر">Atelier à Baraki, Alger</span>
+  <span data-fr="Atelier à Baraki, Alger" data-ar="الورشة في براقي، الجزائر">Atelier à Baraki, Alger</span>
   </div>
  </div>
 </div>
@@ -1370,14 +1436,14 @@ footer {
    <div>
     <h2
      data-fr="UN SEUL ATELIER.<br>PLUSIEURS SOLUTIONS."
-     data-ar="ورشة واحدة.<br>حلول متعددة.">
+    data-ar="ورشة وحدة.<br>حلول بزاف.">
      UN SEUL ATELIER.<br>PLUSIEURS SOLUTIONS.
     </h2>
    </div>
 
    <p class="section-intro"
       data-fr="Du salon complet à la chaise de salle à manger, nous étudions votre besoin et vous proposons une solution adaptée."
-      data-ar="من الصالون الكامل إلى كرسي غرفة الطعام، ندرس احتياجكم ونقترح الحل المناسب.">
+      data-ar="من الصالون كامل حتى لكرسي تاع الماكلة، نشوفو واش تحتاجو ونقترحو عليكم الحل لي يناسبكم.">
     Du salon complet à la chaise de salle à manger, nous étudions votre besoin et vous proposons une solution adaptée.
    </p>
   </div>
@@ -1387,9 +1453,9 @@ footer {
    <article class="service">
     <span class="num">01 / CRÉATION</span>
     <span class="plus">↗</span>
-    <h3 data-fr="Salons sur mesure" data-ar="أرائك حسب الطلب">Salons sur mesure</h3>
+    <h3 data-fr="Salons sur mesure" data-ar="صالونات على القياس">Salons sur mesure</h3>
     <p data-fr="Fabrication complète selon vos dimensions, votre style et votre espace."
-       data-ar="صناعة كاملة حسب المقاسات والذوق والمساحة.">
+      data-ar="نصنعوه على حساب القياسات والذوق والمساحة تاعكم.">
      Fabrication complète selon vos dimensions, votre style et votre espace.
     </p>
    </article>
@@ -1397,9 +1463,9 @@ footer {
    <article class="service">
     <span class="num">02 / RÉNOVATION</span>
     <span class="plus">↗</span>
-    <h3 data-fr="Rénovation de salons" data-ar="تجديد الأرائك">Rénovation de salons</h3>
+    <h3 data-fr="Rénovation de salons" data-ar="تجديد الصالونات">Rénovation de salons</h3>
     <p data-fr="Tissu, mousse et remise en état pour redonner une seconde vie à votre salon."
-       data-ar="تغيير القماش والإسفنج وإعادة تهيئة الصالون.">
+      data-ar="نبدلو القماش والإسفنج ونرجعو الصالون كيما جديد.">
      Tissu, mousse et remise en état pour redonner une seconde vie à votre salon.
     </p>
    </article>
@@ -1407,9 +1473,9 @@ footer {
    <article class="service">
     <span class="num">03 / FAUTEUILS</span>
     <span class="plus">↗</span>
-    <h3 data-fr="Fauteuils & chaises" data-ar="الكراسي والمقاعد">Fauteuils & chaises</h3>
+    <h3 data-fr="Fauteuils & chaises" data-ar="الفوتاي والكراسي">Fauteuils & chaises</h3>
     <p data-fr="Réfection de fauteuils individuels et chaises de salle à manger."
-       data-ar="تجديد الكراسي الفردية وكراسي غرفة الطعام.">
+      data-ar="نصلحو الفوتاي والكراسي تاع غرفة الماكلة.">
      Réfection de fauteuils individuels et chaises de salle à manger.
     </p>
    </article>
@@ -1417,9 +1483,9 @@ footer {
    <article class="service">
     <span class="num">04 / PRO</span>
     <span class="plus">↗</span>
-    <h3 data-fr="Cafés, restaurants, hôtels" data-ar="المقاهي والمطاعم والفنادق">Cafés, restaurants, hôtels</h3>
+    <h3 data-fr="Cafés, restaurants, hôtels" data-ar="قهاوي، مطاعم وفنادق">Cafés, restaurants, hôtels</h3>
     <p data-fr="Fabrication et rénovation d’assises pour les espaces professionnels."
-       data-ar="صناعة وتجديد مقاعد الفضاءات المهنية.">
+      data-ar="نصنعو ونجددو القعدات تاع المحلات والخدمات.">
      Fabrication et rénovation d’assises pour les espaces professionnels.
     </p>
    </article>
@@ -1427,9 +1493,9 @@ footer {
    <article class="service">
     <span class="num">05 / CONFORT</span>
     <span class="plus">↗</span>
-    <h3 data-fr="Remplacement de mousse" data-ar="تغيير الإسفنج">Remplacement de mousse</h3>
+    <h3 data-fr="Remplacement de mousse" data-ar="تبديل الإسفنج">Remplacement de mousse</h3>
     <p data-fr="Remplacement de l’éponge pour retrouver une assise plus confortable."
-       data-ar="تغيير الإسفنج لاستعادة راحة الجلوس.">
+      data-ar="نبدلو الإسفنج باش ترجع القعدة مريحة.">
      Remplacement de l’éponge pour retrouver une assise plus confortable.
     </p>
    </article>
@@ -1437,9 +1503,9 @@ footer {
    <article class="service">
     <span class="num">06 / FINITIONS</span>
     <span class="plus">↗</span>
-    <h3 data-fr="Tissu & habillage" data-ar="الأقمشة والتغليف">Tissu & habillage</h3>
+    <h3 data-fr="Tissu & habillage" data-ar="القماش والتنجيد">Tissu & habillage</h3>
     <p data-fr="Choix du revêtement et finitions selon votre meuble et votre usage."
-       data-ar="اختيار القماش والتشطيبات حسب الأثاث والاستعمال.">
+      data-ar="نختارو القماش والتشطيب على حساب الأثاث وكيفاش تستعملوه.">
      Choix du revêtement et finitions selon votre meuble et votre usage.
     </p>
    </article>
@@ -1457,13 +1523,13 @@ footer {
 
    <h2
     data-fr="LE TISSU<br>FAIT TOUTE<br>LA DIFFÉRENCE."
-    data-ar="القماش<br>يصنع<br>كل الفرق.">
+    data-ar="القماش<br>يبدّل<br>الصالون كامل.">
     LE TISSU<br>FAIT TOUTE<br>LA DIFFÉRENCE.
    </h2>
 
    <p class="fabrics-intro"
       data-fr="Vous choisissez le rendu, le toucher et le niveau de qualité. Nous vous accompagnons pour trouver le revêtement qui correspond à votre salon, à votre utilisation et à votre budget."
-      data-ar="أنتم تختارون الشكل والملمس ومستوى الجودة. نساعدكم في اختيار القماش المناسب لصالونكم وطريقة استعماله وميزانيتكم.">
+      data-ar="نتوما تختارو الشكل والملمس ونوعية القماش. نعاونوكم تلقاو القماش لي يجي مع صالونكم، الاستعمال تاعكم والميزانية.">
     Vous choisissez le rendu, le toucher et le niveau de qualité. Nous vous accompagnons pour trouver le revêtement qui correspond à votre salon, à votre utilisation et à votre budget.
    </p>
 
@@ -1472,12 +1538,12 @@ footer {
     <article>
      <span>01</span>
      <div>
-      <h3 data-fr="Différents niveaux de qualité" data-ar="مستويات جودة مختلفة">
+      <h3 data-fr="Différents niveaux de qualité" data-ar="أنواع وجودة مختلفة">
        Différents niveaux de qualité
       </h3>
       <p
        data-fr="Des tissus aux caractéristiques et finitions variées, selon les références disponibles."
-       data-ar="أقمشة بمواصفات وتشطيبات متنوعة حسب العينات المتوفرة.">
+      data-ar="أقمشة بأشكال وتشطيبات مختلفة، على حساب العينات لي كاينة.">
        Des tissus aux caractéristiques et finitions variées, selon les références disponibles.
       </p>
      </div>
@@ -1486,12 +1552,12 @@ footer {
     <article>
      <span>02</span>
      <div>
-      <h3 data-fr="Option anti-taches" data-ar="خيار مقاوم للبقع">
+      <h3 data-fr="Option anti-taches" data-ar="خيار ضد البقع">
        Option anti-taches
       </h3>
       <p
        data-fr="Des revêtements traités anti-taches peuvent être proposés selon les modèles et la disponibilité."
-       data-ar="يمكن توفير أقمشة معالجة لمقاومة البقع حسب النوع والتوفر.">
+      data-ar="نقدرو نوفرولكم أقمشة ضد البقع، على حساب النوع والتوفر.">
        Des revêtements traités anti-taches peuvent être proposés selon les modèles et la disponibilité.
       </p>
      </div>
@@ -1500,12 +1566,12 @@ footer {
     <article>
      <span>03</span>
      <div>
-      <h3 data-fr="Votre choix, votre projet" data-ar="اختياركم حسب مشروعكم">
+      <h3 data-fr="Votre choix, votre projet" data-ar="اختياركم على حساب مشروعكم">
        Votre choix, votre projet
       </h3>
       <p
        data-fr="Comparez les couleurs, les textures et les qualités avant de valider votre tissu."
-       data-ar="قارنوا الألوان والملمس والجودة قبل اختيار القماش النهائي.">
+      data-ar="قارنو الألوان والملمس والنوعية قبل ما تختارو القماش.">
        Comparez les couleurs, les textures et les qualités avant de valider votre tissu.
       </p>
      </div>
@@ -1516,7 +1582,7 @@ footer {
    <a class="btn btn-dark"
       href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20voudrais%20voir%20les%20%C3%A9chantillons%20de%20tissus."
       data-fr="Voir les tissus disponibles ↗"
-      data-ar="شاهدوا عينات الأقمشة ↗">
+      data-ar="شوفو الأقمشة المتوفرة ↗">
     Voir les tissus disponibles ↗
    </a>
 
@@ -1534,12 +1600,12 @@ footer {
 
    <div class="fabric-placeholder">
     <span class="fabric-placeholder-mark">CS</span>
-    <strong data-fr="VOS ÉCHANTILLONS DE TISSUS" data-ar="عينات الأقمشة">
+    <strong data-fr="VOS ÉCHANTILLONS DE TISSUS" data-ar="عينات القماش تاعكم">
      VOS ÉCHANTILLONS DE TISSUS
     </strong>
     <span
      data-fr="Emplacement réservé à la photo de votre planche de tissus"
-     data-ar="مكان مخصص لصورة لوحة عينات الأقمشة">
+    data-ar="بلاصة مخصصة لتصويرة عينات القماش تاعكم">
      Emplacement réservé à la photo de votre planche de tissus
     </span>
     <small>photos/tissus-echantillons.jpg</small>
@@ -1547,7 +1613,7 @@ footer {
 
    <div class="fabric-board-label"
         data-fr="COULEURS · TEXTURES · FINITIONS"
-        data-ar="ألوان · ملمس · تشطيبات">
+        data-ar="ألوان · ملمس · تشطيب">
     COULEURS · TEXTURES · FINITIONS
    </div>
 
@@ -1565,20 +1631,20 @@ footer {
 
    <h2
     data-fr="VOTRE DEVIS<br>COMMENCE ICI."
-    data-ar="عرض السعر<br>يبدأ من هنا.">
+    data-ar="الديفي<br>يبدا من هنا.">
     VOTRE DEVIS<br>COMMENCE ICI.
    </h2>
 
    <p
     data-fr="Le plus simple : envoyez des photos du meuble sur WhatsApp. Ajoutez les dimensions approximatives et dites-nous ce que vous souhaitez changer."
-    data-ar="أسهل طريقة: أرسلوا صور الأثاث عبر واتساب، مع المقاسات التقريبية وما ترغبون في تغييره.">
+    data-ar="أسهل حاجة: ابعثولنا تصاور الأثاث على واتساب، وزيدو المقاسات التقريبية وواش حابين تبدلو.">
     Le plus simple : envoyez des photos du meuble sur WhatsApp. Ajoutez les dimensions approximatives et dites-nous ce que vous souhaitez changer.
    </p>
 
    <a class="btn btn-dark"
       href="https://wa.me/213772325705?text=Bonjour%2C%20je%20souhaite%20envoyer%20des%20photos%20pour%20un%20devis."
       data-fr="Envoyer mes photos ↗"
-      data-ar="إرسال الصور ↗">
+      data-ar="ابعثو تصاوركم ↗">
     Envoyer mes photos ↗
    </a>
 
@@ -1589,10 +1655,10 @@ footer {
    <div class="step">
     <div class="n">01</div>
     <div>
-     <h3 data-fr="Envoyez vos photos" data-ar="أرسلوا الصور">Envoyez vos photos</h3>
+    <h3 data-fr="Envoyez vos photos" data-ar="ابعثولنا تصاوركم">Envoyez vos photos</h3>
      <p
       data-fr="Montrez-nous le meuble sous plusieurs angles, si possible."
-      data-ar="صوروا الأثاث من عدة زوايا إن أمكن.">
+      data-ar="صورو الأثاث من كذا جهة، إذا قدرتو.">
       Montrez-nous le meuble sous plusieurs angles, si possible.
      </p>
     </div>
@@ -1601,12 +1667,12 @@ footer {
    <div class="step">
     <div class="n">02</div>
     <div>
-     <h3 data-fr="Recevez une première estimation" data-ar="احصلوا على تقدير أولي">
+    <h3 data-fr="Recevez une première estimation" data-ar="تاخدو فكرة أولية على السعر">
       Recevez une première estimation
      </h3>
      <p
       data-fr="Le prix dépend du modèle, des dimensions, de l’état et des matériaux."
-      data-ar="السعر يتحدد حسب الشكل والمقاسات والحالة والمواد.">
+      data-ar="السعر يتبدل على حساب الموديل، المقاسات، الحالة والمواد.">
       Le prix dépend du modèle, des dimensions, de l’état et des matériaux.
      </p>
     </div>
@@ -1615,10 +1681,10 @@ footer {
    <div class="step">
     <div class="n">03</div>
     <div>
-     <h3 data-fr="Confirmez les détails" data-ar="اتفقوا على التفاصيل">Confirmez les détails</h3>
+    <h3 data-fr="Confirmez les détails" data-ar="اتافقو على التفاصيل">Confirmez les détails</h3>
      <p
       data-fr="Dépôt, récupération ou livraison : les modalités sont convenues ensemble."
-      data-ar="يتم الاتفاق على طريقة الإيداع والاسترجاع أو التوصيل.">
+      data-ar="التسبيق، نجيبو السلعة ولا نوصّلوها: نتافقو على كلش مع بعضانا.">
       Dépôt, récupération ou livraison : les modalités sont convenues ensemble.
      </p>
     </div>
@@ -1637,14 +1703,14 @@ footer {
    <div>
     <h2
      data-fr="LE RÉSULTAT<br>PARLE DE LUI-MÊME."
-     data-ar="النتيجة<br>تتحدث عن نفسها.">
+    data-ar="خليو النتيجة<br>تهدر وحدها.">
      LE RÉSULTAT<br>PARLE DE LUI-MÊME.
     </h2>
    </div>
 
    <p class="section-intro"
       data-fr="Des photos réelles de l’atelier : créations neuves, rénovations et détails de finition. Faites défiler et découvrez le travail."
-      data-ar="صور حقيقية من الورشة: صناعة جديدة وتجديد وتفاصيل التشطيب. تصفحوا الأعمال واكتشفوا الجودة.">
+      data-ar="هاذو تصاور حقيقية من الورشة: صالونات جداد، تجديدات وخدمة التشطيب. شوفو الخدمة.">
     Des photos réelles de l’atelier : créations neuves, rénovations et détails de finition. Faites défiler et découvrez le travail.
    </p>
   </div>
@@ -1652,11 +1718,7 @@ footer {
   <div class="portfolio-tools">
 
    <div class="filters" id="filters">
-    <button class="filter active" data-filter="all" data-fr="TOUT" data-ar="الكل">TOUT</button>
-    <button class="filter" data-filter="Salons neufs" data-fr="SALONS NEUFS" data-ar="أرائك جديدة">SALONS NEUFS</button>
-    <button class="filter" data-filter="Rénovation" data-fr="RÉNOVATION" data-ar="تجديد">RÉNOVATION</button>
-    <button class="filter" data-filter="Fauteuils & chaises" data-fr="FAUTEUILS & CHAISES" data-ar="كراسي">FAUTEUILS & CHAISES</button>
-    <button class="filter" data-filter="Professionnels" data-fr="PRO" data-ar="مهني">PRO</button>
+    <button class="filter active" type="button" data-filter="all" data-fr="TOUT" data-ar="كامل" aria-pressed="true">TOUT</button>
    </div>
 
    <span class="count" id="photoCount"></span>
@@ -1664,12 +1726,12 @@ footer {
 
   <div class="gallery" id="gallery">
    <div class="gallery-empty">
-    <strong data-fr="LES RÉALISATIONS ARRIVENT ICI" data-ar="أعمال الورشة تظهر هنا">
+    <strong data-fr="LES RÉALISATIONS ARRIVENT ICI" data-ar="تصاور الخدمة تلقاوهم هنا">
      LES RÉALISATIONS ARRIVENT ICI
     </strong>
     <span
      data-fr="Ajoutez les photos de vrais projets dans le dossier photos. La galerie gardera automatiquement le même format pour chaque image."
-     data-ar="أضيفوا صور المشاريع الحقيقية في مجلد photos. سيحافظ المعرض تلقائياً على نفس مقاس كل الصور.">
+    data-ar="زيدو تصاور المشاريع في دوسي photos. المعرض يعرضهم بنفس المقاس.">
      Ajoutez les photos de vrais projets dans le dossier photos. La galerie gardera automatiquement le même format pour chaque image.
     </span>
     <small>photos.json · guide dans le ZIP</small>
@@ -1680,7 +1742,7 @@ footer {
    <a class="btn btn-gold"
       href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20souhaite%20voir%20vos%20réalisations."
       data-fr="Demander plus de photos ↗"
-      data-ar="اطلبوا المزيد من الصور ↗">
+      data-ar="اطلبو تصاور أكثر ↗">
     Demander plus de photos ↗
    </a>
   </div>
@@ -1701,24 +1763,24 @@ footer {
 
    <h2
     data-fr="11 ANS DE MÉTIER. LE GOÛT DU TRAVAIL BIEN FAIT."
-    data-ar="11 سنة من الخبرة. وإتقان في العمل.">
+    data-ar="11 عام خدمة. والخدمة النقية تبان.">
     11 ANS DE MÉTIER. LE GOÛT DU TRAVAIL BIEN FAIT.
    </h2>
 
    <p
     data-fr="Comfy Seat accompagne vos projets de fabrication et de rénovation de salons et d’assises à Baraki, Alger. Chaque demande est étudiée selon le meuble, son état, ses dimensions et les matériaux souhaités. Le but : trouver la solution qui convient vraiment à votre projet."
-    data-ar="ترافقكم Comfy Seat في مشاريع صناعة وتجديد الأرائك والمقاعد في براقي، الجزائر. ندرس كل طلب حسب نوع الأثاث وحالته ومقاساته والمواد المطلوبة، لنقترح الحل الأنسب لمشروعكم.">
+    data-ar="Comfy Seat معاكم في صناعة وتجديد الصالونات والكراسي في براقي، الجزائر. نشوفو كل مشروع على حساب نوع الأثاث، حالتو، قياساتو والمواد لي حابينها، ونقترحو عليكم الحل لي يناسبكم.">
     Comfy Seat accompagne vos projets de fabrication et de rénovation de salons et d’assises à Baraki, Alger. Chaque demande est étudiée selon le meuble, son état, ses dimensions et les matériaux souhaités. Le but : trouver la solution qui convient vraiment à votre projet.
    </p>
 
    <div class="about-stats">
     <div>
      <strong>11+</strong>
-     <span data-fr="Ans d’expérience" data-ar="سنة خبرة">Ans d’expérience</span>
+    <span data-fr="Ans d’expérience" data-ar="عام خبرة">Ans d’expérience</span>
     </div>
     <div>
      <strong>100%</strong>
-     <span data-fr="Devis personnalisé" data-ar="عرض سعر مخصص">Devis personnalisé</span>
+    <span data-fr="Devis personnalisé" data-ar="سعر على حساب مشروعكم">Devis personnalisé</span>
     </div>
    </div>
 
@@ -1733,20 +1795,20 @@ footer {
 
   <div class="contact-left">
 
-   <h2 data-fr="ON EN PARLE ?" data-ar="لنتحدث عن مشروعكم؟">
+  <h2 data-fr="ON EN PARLE ?" data-ar="نهضرو على مشروعكم؟">
     ON EN PARLE ?
    </h2>
 
    <p
     data-fr="Vous avez un salon à fabriquer, un canapé à rénover ou des chaises à refaire ? Écrivez-nous directement. Pour gagner du temps, joignez quelques photos à votre message."
-    data-ar="هل تريدون صناعة صالون أو تجديد أريكة أو إصلاح كراسي؟ راسلونا مباشرة وأرفقوا بعض الصور لتسهيل التقدير.">
+    data-ar="حابين تصنعو صالون، تجددو كنبة ولا تصلحو كراسي؟ ابعثولنا مباشرة وزيدو مع رسالتكم شوية تصاور باش نعطوكم فكرة على السعر.">
     Vous avez un salon à fabriquer, un canapé à rénover ou des chaises à refaire ? Écrivez-nous directement. Pour gagner du temps, joignez quelques photos à votre message.
    </p>
 
    <a class="btn btn-dark"
       href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20j'ai%20un%20projet."
       data-fr="Écrire à l’atelier ↗"
-      data-ar="راسلوا الورشة ↗">
+      data-ar="ابعثولنا للورشة ↗">
     Écrire à l’atelier ↗
    </a>
 
@@ -1759,7 +1821,7 @@ footer {
     <div class="contact-line">
      <div class="contact-symbol">☎</div>
      <div>
-      <b data-fr="Téléphone & WhatsApp" data-ar="الهاتف وواتساب">Téléphone & WhatsApp</b>
+      <b data-fr="Téléphone & WhatsApp" data-ar="التليفون وواتساب">Téléphone & WhatsApp</b>
       <a href="tel:+213772325705">0772 32 57 05</a>
      </div>
     </div>
@@ -1775,10 +1837,10 @@ footer {
     <div class="contact-line">
      <div class="contact-symbol">↗</div>
      <div>
-      <b data-fr="Zone de service" data-ar="منطقة العمل">Zone de service</b>
+      <b data-fr="Zone de service" data-ar="وين نخدمو">Zone de service</b>
       <span
        data-fr="Alger et environs — transport à convenir selon le projet."
-       data-ar="الجزائر وضواحيها — يتم الاتفاق على النقل حسب المشروع.">
+      data-ar="الجزائر وضواحيها، والنقل نتافقو عليه على حساب الخدمة.">
        Alger et environs — transport à convenir selon le projet.
       </span>
      </div>
@@ -1786,7 +1848,7 @@ footer {
 
     <div class="contact-buttons">
      <a class="btn btn-gold" href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat">WHATSAPP ↗</a>
-     <a class="btn btn-dark" href="tel:+213772325705" data-fr="APPELER" data-ar="اتصال">APPELER</a>
+    <a class="btn btn-dark" href="tel:+213772325705" data-fr="APPELER" data-ar="عيطولنا">APPELER</a>
     </div>
 
    </div>
@@ -1806,7 +1868,7 @@ footer {
        rel="noopener">
      <span
       data-fr="OUVRIR L’EMPLACEMENT EXACT · ITINÉRAIRE GOOGLE MAPS"
-      data-ar="افتح الموقع الدقيق · الاتجاهات عبر خرائط Google">
+      data-ar="شوفو البلاصة بالضبط · الطريق في Google Maps">
       OUVRIR L’EMPLACEMENT EXACT · ITINÉRAIRE GOOGLE MAPS
      </span>
      <span>↗</span>
@@ -1847,11 +1909,11 @@ footer {
 <!-- MOBILE CONTACT BAR -->
 
 <div class="mobile-bar">
- <a class="phone" href="tel:+213772325705" data-fr="APPELER" data-ar="اتصال">APPELER</a>
+ <a class="phone" href="tel:+213772325705" data-fr="APPELER" data-ar="عيطولنا">APPELER</a>
  <a class="quote"
     href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20souhaite%20un%20devis."
     data-fr="DEVIS WHATSAPP"
-    data-ar="عرض سعر واتساب">DEVIS WHATSAPP</a>
+    data-ar="السعر عبر واتساب">DEVIS WHATSAPP</a>
 </div>
 
 <!-- IMAGE LIGHTBOX -->
@@ -1868,9 +1930,14 @@ const $$ = (s,root=document) => [...root.querySelectorAll(s)];
 let currentLang = 'fr';
 let photoItems = [];
 let activeFilter = 'all';
+let currentGalleryItems = [];
+let currentSlide = 0;
+let galleryTimer = null;
 
 const langBtn = $('#langBtn');
 const gallery = $('#gallery');
+const filters = $('#filters');
+const lightbox = $('#lightbox');
 
 function setLanguage(lang) {
  currentLang = lang;
@@ -1884,6 +1951,7 @@ function setLanguage(lang) {
 
  langBtn.textContent = lang === 'fr' ? 'العربية' : 'Français';
 
+ renderFilters();
  renderGallery(activeFilter);
 }
 
@@ -1905,14 +1973,89 @@ function safe(value) {
  }[char]));
 }
 
+const categoryTranslations = {
+ 'Avant / Après': { fr:'AVANT / APRÈS', ar:'قبل وبعد' },
+ 'Salons sur mesure': { fr:'SALONS SUR MESURE', ar:'صالونات على القياس' },
+ 'Chaises': { fr:'CHAISES', ar:'الكراسي' }
+};
+
+function renderFilters() {
+ const categories = [...new Set(photoItems.map(item => item.category).filter(Boolean))];
+ const allLabel = currentLang === 'fr' ? 'TOUT' : 'كامل';
+
+ filters.innerHTML = [
+  `<button class="filter${activeFilter === 'all' ? ' active' : ''}" type="button" data-filter="all" aria-pressed="${activeFilter === 'all'}">${allLabel}</button>`,
+  ...categories.map(category => {
+   const label = categoryTranslations[category]?.[currentLang] || category;
+   return `<button class="filter${activeFilter === category ? ' active' : ''}" type="button" data-filter="${safe(category)}" aria-pressed="${activeFilter === category}">${safe(label)}</button>`;
+  })
+ ].join('');
+}
+
+function stopSlideshow() {
+ clearTimeout(galleryTimer);
+ galleryTimer = null;
+}
+
+function startSlideshow() {
+ stopSlideshow();
+
+ if (currentGalleryItems.length < 2 || document.hidden ||
+   window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+   lightbox.classList.contains('open')) return;
+
+ galleryTimer = setTimeout(() => showSlide(currentSlide + 1),5000);
+}
+
+function showSlide(index) {
+ if (!currentGalleryItems.length) return;
+
+ currentSlide = (index + currentGalleryItems.length) % currentGalleryItems.length;
+ const photo = currentGalleryItems[currentSlide];
+ const previousLabel = currentLang === 'fr' ? 'Photo précédente' : 'التصويرة لي قبل';
+ const nextLabel = currentLang === 'fr' ? 'Photo suivante' : 'التصويرة لي من بعد';
+ const openLabel = currentLang === 'fr' ? 'Agrandir la photo' : 'كبّر التصويرة';
+ const slideNumber = `${String(currentSlide + 1).padStart(2,'0')} / ${String(currentGalleryItems.length).padStart(2,'0')}`;
+
+ gallery.innerHTML = `
+  <figure class="gallery-card">
+   <div class="gallery-frame">
+  <button class="gallery-open" type="button" aria-label="${openLabel}">
+   <img class="gallery-image" src="${safe(photo.src)}" alt="${safe(photo.alt || photo.title || 'Réalisation Comfy Seat')}">
+  </button>
+  <button class="gallery-arrow gallery-prev" type="button" aria-label="${previousLabel}">&lsaquo;</button>
+  <button class="gallery-arrow gallery-next" type="button" aria-label="${nextLabel}">&rsaquo;</button>
+   </div>
+   <figcaption class="gallery-caption">
+  <div>
+   <strong>${safe(photo.title || 'Comfy Seat')}</strong>
+   <span>${safe(photo.category || '')}</span>
+  </div>
+  <span class="gallery-index">${slideNumber}</span>
+   </figcaption>
+  </figure>
+ `;
+
+ $('.gallery-open',gallery).addEventListener('click',() => openLightbox(photo));
+ $('.gallery-prev',gallery).addEventListener('click',() => showSlide(currentSlide - 1));
+ $('.gallery-next',gallery).addEventListener('click',() => showSlide(currentSlide + 1));
+
+ const nextPhoto = new Image();
+ nextPhoto.src = currentGalleryItems[(currentSlide + 1) % currentGalleryItems.length].src;
+ startSlideshow();
+}
+
 function renderGallery(filter='all') {
- const items = photoItems.filter(item =>
+ stopSlideshow();
+ currentGalleryItems = photoItems.filter(item =>
   filter === 'all' || item.category === filter
  );
+ currentSlide = 0;
+ const items = currentGalleryItems;
 
  $('#photoCount').textContent = currentLang === 'fr'
   ? `${items.length} réalisation${items.length>1?'s':''}`
-  : `${items.length} أعمال`;
+  : `${items.length} مشاريع`;
 
  if (!items.length) {
   gallery.innerHTML = `
@@ -1920,61 +2063,35 @@ function renderGallery(filter='all') {
     <strong>
      ${currentLang === 'fr'
       ? 'LES PHOTOS DE CETTE CATÉGORIE ARRIVENT BIENTÔT'
-      : 'صور هذا التصنيف ستضاف قريباً'}
+      : 'قريب نزيدو تصاور هاد النوع'}
     </strong>
     ${currentLang === 'fr'
-     ? 'Ajoutez vos réalisations dans photos.json.'
-     : 'أضيفوا أعمالكم في ملف photos.json.'}
+    ? 'Ajoutez vos réalisations dans photos.json.'
+    : 'زيدو تصاور خدمتكم في ملف photos.json.'}
    </div>`;
   return;
  }
 
- gallery.innerHTML = items.map(p => `
-  <figure class="gallery-card" tabindex="0" role="button"
-   aria-label="Voir ${safe(p.title || 'réalisation')}">
-   <img class="gallery-image"
-    loading="lazy"
-    src="${safe(p.src)}"
-    alt="${safe(p.alt || p.title || 'Réalisation Comfy Seat')}">
-   <figcaption class="gallery-caption">
-    <strong>${safe(p.title || 'Comfy Seat')}</strong>
-    <span>${safe(p.category || '')}</span>
-   </figcaption>
-  </figure>
- `).join('');
-
- $$('.gallery-card',gallery).forEach((card,i) => {
-  const open = () => openLightbox(items[i]);
-
-  card.addEventListener('click',open);
-
-  card.addEventListener('keydown',e => {
-   if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    open();
-   }
-  });
- });
+ showSlide(0);
 }
 
 /* GALLERY FILTERS */
 
-$$('.filter').forEach(btn => {
- btn.addEventListener('click',() => {
-  $$('.filter').forEach(b => b.classList.remove('active'));
+filters.addEventListener('click',event => {
+ const button = event.target.closest('.filter');
+ if (!button) return;
 
-  btn.classList.add('active');
-  activeFilter = btn.dataset.filter;
-
-  renderGallery(activeFilter);
- });
+ activeFilter = button.dataset.filter;
+ renderFilters();
+ renderGallery(activeFilter);
 });
+
+document.addEventListener('visibilitychange',startSlideshow);
 
 /* LIGHTBOX */
 
-const lightbox = $('#lightbox');
-
 function openLightbox(photo) {
+ stopSlideshow();
  $('#lightboxImg').src = photo.src;
  $('#lightboxImg').alt = photo.alt || photo.title || '';
 
@@ -1985,6 +2102,7 @@ function openLightbox(photo) {
 function closeLightbox() {
  lightbox.classList.remove('open');
  document.body.style.overflow = '';
+ startSlideshow();
 }
 
 $('#lightboxClose').addEventListener('click',closeLightbox);
@@ -2011,9 +2129,9 @@ fetch('photos.json')
   const hero = new Image();
 
   hero.onload = () => {
-   $('.hero-photo').style.backgroundImage = `
-    linear-gradient(90deg,rgba(13,12,11,.88) 0%,rgba(13,12,11,.64) 42%,rgba(13,12,11,.10) 100%),
-    linear-gradient(0deg,rgba(10,9,8,.58),transparent 55%),
+  $('.hero-photo').style.backgroundImage = `
+   linear-gradient(90deg,rgba(13,25,22,.86) 0%,rgba(13,25,22,.58) 44%,rgba(13,25,22,.08) 100%),
+   linear-gradient(0deg,rgba(10,20,17,.50),transparent 58%),
     url("${heroPath}")`;
 
    $('.hero').classList.remove('no-photo');
@@ -2023,9 +2141,13 @@ fetch('photos.json')
 
   hero.src = heroPath;
 
+  renderFilters();
   renderGallery();
  })
- .catch(() => renderGallery());
+ .catch(() => {
+  renderFilters();
+  renderGallery();
+ });
 
 /* SCROLL ANIMATION */
 
