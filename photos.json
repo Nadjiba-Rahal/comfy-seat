@@ -1,0 +1,96 @@
+
+{
+  "hero": "photos/hero.jpg",
+  "items": [
+    {
+      "src": "photos/avant-apres-01.jpg",
+      "alt": "Comparaison avant et après rénovation d'un canapé",
+      "title": "Transformation de canapé",
+      "category": "Avant / Après"
+    },
+    {
+      "src": "photos/avant-apres-02.jpg",
+      "alt": "Fauteuil avant et après rénovation",
+      "title": "Rénovation de fauteuil",
+      "category": "Avant / Après"
+    },
+    {
+      "src": "photos/avant-apres-03.jpg",
+      "alt": "Chaise avant et après rénovation",
+      "title": "Rénovation de chaise",
+      "category": "Avant / Après"
+    },
+    {
+      "src": "photos/avant-apres-04.jpg",
+      "alt": "Chaises avant et après rénovation",
+      "title": "Transformation de chaises",
+      "category": "Avant / Après"
+    },
+    {
+      "src": "photos/avant-apres-05.jpg",
+      "alt": "Mobilier avant et après rénovation",
+      "title": "Rénovation de mobilier",
+      "category": "Avant / Après"
+    },
+    {
+      "src": "photos/avant-apres-06.jpg",
+      "alt": "Fauteuil avant et après rénovation",
+      "title": "Nouvelle finition",
+      "category": "Avant / Après"
+    },
+    {
+      "src": "photos/salon-01.jpeg",
+      "alt": "Salon fabriqué sur mesure",
+      "title": "Salon sur mesure",
+      "category": "Salons sur mesure"
+    },
+    {
+      "src": "photos/salon-02.jpeg",
+      "alt": "Salon fabriqué sur mesure",
+      "title": "Fabrication artisanale",
+      "category": "Salons sur mesure"
+    },
+    {
+      "src": "photos/salon-03.jpeg",
+      "alt": "Salon réalisé sur mesure",
+      "title": "Salon personnalisé",
+      "category": "Salons sur mesure"
+    },
+    {
+      "src": "photos/salon-04.jpg",
+      "alt": "Salon complet réalisé sur mesure",
+      "title": "Salon contemporain",
+      "category": "Salons sur mesure"
+    },
+    {
+      "src": "photos/salon-05.jpeg",
+      "alt": "Salon fabriqué sur mesure",
+      "title": "Salon classique",
+      "category": "Salons sur mesure"
+    },
+    {
+      "src": "photos/salon-06.jpeg",
+      "alt": "Salon avec finition artisanale",
+      "title": "Salon personnalisé",
+      "category": "Salons sur mesure"
+    },
+    {
+      "src": "photos/chaises-01.jpeg",
+      "alt": "Chaises rénovées et rembourrées",
+      "title": "Rénovation de chaises",
+      "category": "Chaises"
+    },
+    {
+      "src": "photos/chaises-02.jpeg",
+      "alt": "Chaises rembourrées",
+      "title": "Rembourrage de chaises",
+      "category": "Chaises"
+    },
+    {
+      "src": "photos/chaises-03.jpeg",
+      "alt": "Chaise restaurée et retapissée",
+      "title": "Restauration de chaise",
+      "category": "Chaises"
+    }
+  ]
+}

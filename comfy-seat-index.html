@@ -1,0 +1,2051 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#171513">
+<meta name="description" content="Comfy Seat — fabrication de salons sur mesure, rénovation de canapés, fauteuils et chaises à Baraki, Alger.">
+<title>Comfy Seat — Fabrication & rénovation de salons à Alger</title>
+
+<style>
+:root {
+ --black:#171513;
+ --black2:#211d19;
+ --gold:#d8a24d;
+ --gold-light:#f0c77d;
+ --cream:#f6f1e8;
+ --white:#fff;
+ --muted:#77716a;
+ --line:#e8e0d5;
+ --green:#20a45b;
+}
+
+* { box-sizing:border-box; }
+
+html {
+ scroll-behavior:smooth;
+ scroll-padding-top:78px;
+}
+
+body {
+ margin:0;
+ color:var(--black);
+ background:#fff;
+ font-family:Arial,Helvetica,sans-serif;
+ -webkit-font-smoothing:antialiased;
+}
+
+body,button,a { font-family:Arial,Helvetica,sans-serif; }
+a { color:inherit;text-decoration:none; }
+button { cursor:pointer; }
+img { max-width:100%;display:block; }
+
+.wrap {
+ width:min(1200px,calc(100% - 48px));
+ margin:auto;
+}
+
+/* HEADER */
+
+.announcement {
+ background:var(--black);
+ color:#e7ded2;
+ font-size:11px;
+ letter-spacing:.07em;
+ padding:9px 0;
+}
+
+.announcement .wrap {
+ display:flex;
+ justify-content:space-between;
+ gap:15px;
+}
+
+.announcement strong { color:var(--gold-light); }
+
+header {
+ position:sticky;
+ top:0;
+ z-index:40;
+ background:#fff;
+ border-bottom:1px solid #eae5dd;
+}
+
+.nav {
+ height:76px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:24px;
+}
+
+.logo img {
+ width:148px;
+ height:65px;
+ object-fit:contain;
+ object-position:left center;
+}
+
+.nav-links {
+ display:flex;
+ align-items:center;
+ gap:24px;
+ font-size:13px;
+ font-weight:700;
+}
+
+.nav-links a {
+ padding:10px 0;
+ position:relative;
+}
+
+.nav-links a:after {
+ content:"";
+ height:2px;
+ background:var(--gold);
+ position:absolute;
+ bottom:2px;
+ left:0;
+ right:100%;
+ transition:.2s;
+}
+
+.nav-links a:hover:after { right:0; }
+
+.nav-actions {
+ display:flex;
+ align-items:center;
+ gap:10px;
+}
+
+.lang {
+ border:1px solid var(--line);
+ background:#fff;
+ padding:10px 12px;
+ font-size:12px;
+ font-weight:800;
+}
+
+.btn {
+ display:inline-flex;
+ justify-content:center;
+ align-items:center;
+ gap:9px;
+ padding:15px 21px;
+ border:0;
+ font-size:12px;
+ font-weight:800;
+ letter-spacing:.035em;
+ text-transform:uppercase;
+ transition:.2s;
+}
+
+.btn-gold {
+ background:var(--gold);
+ color:#17120d;
+}
+
+.btn-gold:hover {
+ background:var(--gold-light);
+ transform:translateY(-2px);
+}
+
+.btn-dark {
+ background:var(--black);
+ color:#fff;
+}
+
+.btn-dark:hover { background:#332920; }
+
+.btn-line {
+ border:1px solid #ffffff80;
+ color:#fff;
+ background:#17151320;
+}
+
+.btn-line:hover { background:#ffffff18; }
+
+/* HERO */
+
+.hero {
+ min-height:min(780px,calc(100svh - 85px));
+ height:720px;
+ max-height:850px;
+ background:#26211c;
+ position:relative;
+ color:#fff;
+ display:flex;
+ align-items:flex-end;
+ overflow:hidden;
+}
+
+.hero-photo {
+ position:absolute;
+ inset:0;
+ background-image:
+  linear-gradient(90deg,rgba(13,12,11,.88) 0%,rgba(13,12,11,.64) 42%,rgba(13,12,11,.10) 100%),
+  linear-gradient(0deg,rgba(10,9,8,.58),transparent 55%),
+  url('photos/hero.jpg');
+ background-position:center;
+ background-size:cover;
+ transform:scale(1.01);
+}
+
+.hero.no-photo .hero-photo {
+ background-image:linear-gradient(115deg,#171513 0%,#30251a 55%,#77552c 100%);
+}
+
+.hero-content {
+ position:relative;
+ z-index:2;
+ width:100%;
+ padding:90px 0 82px;
+}
+
+.hero-copy { max-width:690px; }
+
+h1 {
+ font-size:clamp(46px,6.2vw,82px);
+ line-height:.98;
+ letter-spacing:-.055em;
+ font-weight:900;
+ text-transform:uppercase;
+ margin:0 0 22px;
+ max-width:760px;
+}
+
+h1 span { color:var(--gold-light); }
+
+.hero-copy p {
+ font-size:16px;
+ line-height:1.7;
+ color:#eee8df;
+ max-width:520px;
+ margin:0 0 30px;
+}
+
+.hero-buttons {
+ display:flex;
+ flex-wrap:wrap;
+ gap:11px;
+}
+
+.hero-meta {
+ display:flex;
+ align-items:center;
+ gap:18px;
+ margin-top:38px;
+ color:#e0d7cb;
+ font-size:12px;
+}
+
+.hero-meta strong { color:white; }
+
+.hero-meta i {
+ width:5px;
+ height:5px;
+ background:var(--gold);
+ border-radius:50%;
+}
+
+.hero-scroll {
+ position:absolute;
+ right:25px;
+ bottom:36px;
+ z-index:3;
+ writing-mode:vertical-rl;
+ color:#f1dfc2;
+ font-size:10px;
+ letter-spacing:.18em;
+ text-transform:uppercase;
+}
+
+/* PROOF STRIP */
+
+.quick-proof {
+ background:var(--gold);
+ color:#17120d;
+}
+
+.proof-grid {
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+}
+
+.proof {
+ padding:20px 24px;
+ border-right:1px solid #1715132b;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ gap:12px;
+ font-size:12px;
+ font-weight:900;
+ text-transform:uppercase;
+ letter-spacing:.045em;
+}
+
+.proof:last-child { border:0; }
+.proof b { font-size:23px;font-weight:900; }
+
+/* GENERAL SECTIONS */
+
+section { padding:94px 0; }
+
+.section-top {
+ display:flex;
+ justify-content:space-between;
+ align-items:end;
+ gap:25px;
+ margin-bottom:38px;
+}
+
+h2 {
+ font-size:clamp(34px,4.2vw,55px);
+ line-height:1.03;
+ letter-spacing:-.05em;
+ text-transform:uppercase;
+ margin:0;
+ font-weight:900;
+ max-width:720px;
+}
+
+.section-intro {
+ font-size:14px;
+ line-height:1.75;
+ color:var(--muted);
+ max-width:420px;
+ margin:0;
+}
+
+/* SERVICES */
+
+.services { background:#fff; }
+
+.service-grid {
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ border-top:1px solid var(--line);
+ border-left:1px solid var(--line);
+}
+
+.service {
+ min-height:205px;
+ padding:27px 26px;
+ border-right:1px solid var(--line);
+ border-bottom:1px solid var(--line);
+ position:relative;
+ transition:.2s;
+}
+
+.service:hover { background:#fbf7f0; }
+
+.service .num {
+ font-size:11px;
+ color:#a66e2a;
+ font-weight:900;
+ letter-spacing:.1em;
+}
+
+.service h3 {
+ font-size:20px;
+ line-height:1.1;
+ letter-spacing:-.035em;
+ text-transform:uppercase;
+ margin:23px 0 10px;
+}
+
+.service p {
+ font-size:13px;
+ color:var(--muted);
+ line-height:1.65;
+ margin:0;
+ max-width:310px;
+}
+
+.service .plus {
+ position:absolute;
+ right:23px;
+ top:23px;
+ color:#b47a31;
+ font-size:19px;
+}
+
+/* FABRIC SECTION */
+
+.fabrics {
+ background:#f4eee4;
+}
+
+.fabrics-grid {
+ display:grid;
+ grid-template-columns:.9fr 1.1fr;
+ gap:65px;
+ align-items:center;
+}
+
+.fabrics-copy h2 { max-width:560px; }
+
+.fabrics-intro {
+ font-size:14px;
+ line-height:1.8;
+ color:var(--muted);
+ max-width:470px;
+ margin:20px 0 26px;
+}
+
+.fabric-options {
+ border-top:1px solid #d8cbb8;
+ margin-bottom:28px;
+}
+
+.fabric-options article {
+ display:grid;
+ grid-template-columns:38px 1fr;
+ gap:14px;
+ padding:17px 0;
+ border-bottom:1px solid #d8cbb8;
+}
+
+.fabric-options article>span {
+ font-size:18px;
+ font-weight:900;
+ color:#ad762f;
+}
+
+.fabric-options h3 {
+ font-size:14px;
+ text-transform:uppercase;
+ margin:2px 0 6px;
+}
+
+.fabric-options p {
+ font-size:12px;
+ line-height:1.65;
+ color:var(--muted);
+ margin:0;
+}
+
+/* FABRIC SAMPLE BOARD IMAGE AREA */
+
+.fabric-board {
+ min-height:500px;
+ position:relative;
+ background:#e4d8c6;
+ border:12px solid #fff;
+ box-shadow:0 18px 45px #34271918;
+ display:grid;
+ place-items:center;
+ overflow:hidden;
+}
+
+.fabric-board img {
+ position:absolute;
+ inset:0;
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ opacity:0;
+ transition:opacity .3s;
+}
+
+.fabric-board img.loaded { opacity:1; }
+
+.fabric-placeholder {
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ text-align:center;
+ padding:35px;
+ color:#665541;
+ gap:12px;
+}
+
+.fabric-placeholder-mark {
+ width:62px;
+ height:62px;
+ border:1px solid #a9875b;
+ border-radius:50%;
+ display:grid;
+ place-items:center;
+ font-weight:900;
+ letter-spacing:.08em;
+ color:#946b36;
+}
+
+.fabric-placeholder strong {
+ font-size:16px;
+ letter-spacing:.08em;
+}
+
+.fabric-placeholder>span:not(.fabric-placeholder-mark) {
+ font-size:12px;
+ line-height:1.6;
+ max-width:260px;
+}
+
+.fabric-placeholder small {
+ font-size:10px;
+ color:#927d64;
+}
+
+.fabric-board:has(img.loaded) .fabric-placeholder { display:none; }
+
+.fabric-board-label {
+ position:absolute;
+ bottom:0;
+ left:0;
+ right:0;
+ background:#171513e8;
+ color:#f0c77d;
+ padding:14px 18px;
+ font-size:10px;
+ font-weight:900;
+ letter-spacing:.16em;
+ text-align:center;
+}
+
+/* HOW IT WORKS */
+
+.how { background:var(--cream); }
+
+.how-grid {
+ display:grid;
+ grid-template-columns:.9fr 1.1fr;
+ gap:75px;
+ align-items:start;
+}
+
+.how-lead p {
+ color:var(--muted);
+ font-size:14px;
+ line-height:1.8;
+ max-width:410px;
+ margin:20px 0 25px;
+}
+
+.steps { border-top:1px solid #d8cbb8; }
+
+.step {
+ display:grid;
+ grid-template-columns:48px 1fr;
+ gap:15px;
+ padding:22px 0;
+ border-bottom:1px solid #d8cbb8;
+}
+
+.step .n {
+ font-size:22px;
+ font-weight:900;
+ color:#ad762f;
+}
+
+.step h3 {
+ font-size:15px;
+ text-transform:uppercase;
+ margin:2px 0 6px;
+}
+
+.step p {
+ font-size:13px;
+ color:var(--muted);
+ line-height:1.6;
+ margin:0;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+ background:var(--black);
+ color:#fff;
+}
+
+.portfolio .section-intro { color:#c7bdb1; }
+
+.portfolio-tools {
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:15px;
+ margin-bottom:24px;
+}
+
+.filters {
+ display:flex;
+ gap:8px;
+ flex-wrap:wrap;
+}
+
+.filter {
+ border:1px solid #5a5045;
+ background:transparent;
+ color:#e7ded2;
+ padding:10px 14px;
+ font-size:11px;
+ font-weight:800;
+}
+
+.filter.active,.filter:hover {
+ background:var(--gold);
+ color:#17120d;
+ border-color:var(--gold);
+}
+
+.count {
+ font-size:11px;
+ color:#b7aa9a;
+ white-space:nowrap;
+}
+
+.gallery {
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:14px;
+}
+
+.gallery-card {
+ margin:0;
+ min-width:0;
+ background:#29231d;
+ overflow:hidden;
+ cursor:pointer;
+}
+
+.gallery-image {
+ width:100%;
+ aspect-ratio:4/3;
+ object-fit:cover;
+ background:#332b22;
+ transition:transform .4s;
+ display:block;
+}
+
+.gallery-card:hover .gallery-image { transform:scale(1.035); }
+
+.gallery-caption {
+ padding:13px 15px 15px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:12px;
+}
+
+.gallery-caption strong {
+ font-size:12px;
+ text-transform:uppercase;
+ letter-spacing:.025em;
+}
+
+.gallery-caption span {
+ font-size:10px;
+ color:var(--gold-light);
+}
+
+.gallery-empty {
+ grid-column:1/-1;
+ border:1px dashed #655746;
+ padding:34px 24px;
+ text-align:center;
+ color:#d2c5b4;
+ font-size:13px;
+ line-height:1.7;
+}
+
+.gallery-empty strong {
+ display:block;
+ color:var(--gold-light);
+ font-size:18px;
+ margin-bottom:6px;
+}
+
+.gallery-empty small {
+ display:block;
+ color:#b9ad9f;
+ margin-top:8px;
+}
+
+.portfolio-bottom {
+ display:flex;
+ justify-content:center;
+ margin-top:30px;
+}
+
+/* ABOUT */
+
+.about { background:#fff; }
+
+.about-grid {
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:70px;
+ align-items:center;
+}
+
+.about-visual {
+ min-height:440px;
+ background:linear-gradient(140deg,#4a3520,#171513);
+ display:grid;
+ place-items:center;
+ position:relative;
+ overflow:hidden;
+}
+
+.about-visual:before {
+ content:"";
+ position:absolute;
+ width:390px;
+ height:390px;
+ border:1px solid #d8a24d99;
+ border-radius:50%;
+}
+
+.about-visual:after {
+ content:"";
+ position:absolute;
+ width:300px;
+ height:300px;
+ border:1px solid #d8a24d66;
+ border-radius:50%;
+}
+
+.about-logo {
+ z-index:1;
+ width:min(78%,370px);
+ filter:drop-shadow(0 8px 22px #0008);
+}
+
+.about-text p {
+ font-size:14px;
+ line-height:1.85;
+ color:var(--muted);
+ margin:20px 0;
+}
+
+.about-stats {
+ display:flex;
+ gap:35px;
+ margin-top:28px;
+ padding-top:22px;
+ border-top:1px solid var(--line);
+}
+
+.about-stats strong {
+ display:block;
+ font-size:26px;
+ letter-spacing:-.05em;
+}
+
+.about-stats span {
+ font-size:10px;
+ color:var(--muted);
+ text-transform:uppercase;
+ letter-spacing:.08em;
+}
+
+/* CONTACT */
+
+.contact { background:var(--cream); }
+
+.contact-grid {
+ display:grid;
+ grid-template-columns:.9fr 1.1fr;
+ gap:65px;
+}
+
+.contact-left p {
+ color:var(--muted);
+ font-size:14px;
+ line-height:1.8;
+ max-width:410px;
+ margin:20px 0 27px;
+}
+
+.contact-card {
+ background:#fff;
+ padding:28px;
+ border:1px solid #e5dbcd;
+}
+
+.contact-line {
+ display:grid;
+ grid-template-columns:36px 1fr;
+ gap:13px;
+ padding:13px 0;
+ border-bottom:1px solid var(--line);
+ align-items:start;
+}
+
+.contact-line:last-of-type { border:0; }
+
+.contact-symbol {
+ height:34px;
+ width:34px;
+ background:var(--cream);
+ display:grid;
+ place-items:center;
+ font-size:16px;
+ color:#986324;
+}
+
+.contact-line b {
+ display:block;
+ font-size:12px;
+ text-transform:uppercase;
+ margin-bottom:4px;
+}
+
+.contact-line span,.contact-line a {
+ font-size:13px;
+ color:var(--muted);
+}
+
+.contact-buttons {
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:9px;
+ margin-top:20px;
+}
+
+.contact-buttons .btn {
+ padding:14px 10px;
+ font-size:10px;
+}
+
+.map-wrap {
+ margin-top:17px;
+ background:#e5ded3;
+}
+
+.map-wrap iframe {
+ display:block;
+ width:100%;
+ height:260px;
+ border:0;
+}
+
+.map-directions {
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:15px;
+ padding:14px 16px;
+ background:#211d19;
+ color:white;
+ font-size:11px;
+ font-weight:900;
+ text-transform:uppercase;
+ letter-spacing:.04em;
+}
+
+.map-directions span:last-child {
+ color:var(--gold-light);
+ font-size:17px;
+}
+
+/* FOOTER & FLOATING CONTACT */
+
+footer {
+ background:var(--black);
+ color:#c7bdb1;
+ padding:30px 0 95px;
+}
+
+.footer-row {
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:20px;
+}
+
+.footer-logo {
+ width:112px;
+ height:56px;
+ object-fit:contain;
+}
+
+.footer-row small {
+ font-size:10px;
+ color:#a99e91;
+}
+
+.wa-float {
+ position:fixed;
+ right:20px;
+ bottom:20px;
+ z-index:70;
+ background:var(--green);
+ color:white;
+ border-radius:100px;
+ padding:14px 18px;
+ display:flex;
+ align-items:center;
+ gap:9px;
+ font-size:12px;
+ font-weight:900;
+ box-shadow:0 8px 25px #0004;
+ transition:.2s;
+}
+
+.wa-float:hover {
+ transform:translateY(-3px);
+ background:#168b4d;
+}
+
+.wa-float svg {
+ width:21px;
+ height:21px;
+ fill:currentColor;
+}
+
+.mobile-bar { display:none; }
+
+/* LIGHTBOX */
+
+.lightbox {
+ position:fixed;
+ inset:0;
+ background:#090807f2;
+ z-index:100;
+ display:none;
+ align-items:center;
+ justify-content:center;
+ padding:25px;
+}
+
+.lightbox.open { display:flex; }
+
+.lightbox img {
+ max-width:min(1100px,92vw);
+ max-height:82vh;
+ object-fit:contain;
+}
+
+.lightbox button {
+ position:absolute;
+ top:18px;
+ right:20px;
+ background:#fff;
+ color:#171513;
+ border:0;
+ width:42px;
+ height:42px;
+ font-size:24px;
+}
+
+/* ANIMATION */
+
+.reveal {
+ opacity:0;
+ transform:translateY(18px);
+ transition:opacity .65s,transform .65s;
+}
+
+.reveal.visible {
+ opacity:1;
+ transform:none;
+}
+
+/* RTL */
+
+[dir="rtl"] .nav-links { direction:rtl; }
+
+[dir="rtl"] .hero-copy,
+[dir="rtl"] .section-top,
+[dir="rtl"] .how-lead,
+[dir="rtl"] .about-text,
+[dir="rtl"] .contact-left,
+[dir="rtl"] .fabrics-copy {
+ text-align:right;
+}
+
+[dir="rtl"] .about-grid,
+[dir="rtl"] .contact-grid,
+[dir="rtl"] .fabrics-grid {
+ direction:rtl;
+}
+
+/* TABLET */
+
+@media(max-width:900px) {
+ .wrap { width:min(100% - 36px,760px); }
+
+ .nav { height:68px; }
+ .logo img { width:125px;height:58px; }
+ .nav-links { gap:13px;font-size:11px; }
+ .nav-actions .nav-quote { display:none; }
+
+ .hero { height:680px;min-height:620px; }
+ .hero-photo { background-position:58% center; }
+ .hero-content { padding:70px 0; }
+
+ .service-grid { grid-template-columns:repeat(2,1fr); }
+
+ .how-grid,
+ .about-grid,
+ .contact-grid,
+ .fabrics-grid {
+  grid-template-columns:1fr;
+  gap:38px;
+ }
+
+ .about-visual {
+  min-height:330px;
+  order:2;
+ }
+
+ .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
+
+ .fabric-board { min-height:420px; }
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+ .wrap { width:calc(100% - 30px); }
+
+ .announcement { font-size:9px; }
+ .announcement .wrap span:last-child { display:none; }
+
+ .nav { height:61px; }
+ .logo img { width:105px;height:51px; }
+ .nav-links { display:none; }
+
+ .lang { padding:9px 11px; }
+
+ .hero {
+  height:calc(88svh - 61px);
+  min-height:570px;
+  max-height:760px;
+  align-items:flex-end;
+ }
+
+ .hero-photo {
+  background-image:
+   linear-gradient(0deg,rgba(10,9,8,.92) 0%,rgba(10,9,8,.58) 46%,rgba(10,9,8,.12) 100%),
+   url('photos/hero.jpg');
+  background-position:center;
+  background-size:cover;
+ }
+
+ .hero.no-photo .hero-photo {
+  background-image:linear-gradient(145deg,#171513,#3d2c1b);
+ }
+
+ .hero-content { padding:50px 0 54px; }
+
+ h1 {
+  font-size:clamp(42px,12vw,60px);
+  line-height:.96;
+  margin:0 0 15px;
+ }
+
+ .hero-copy p {
+  font-size:13px;
+  line-height:1.65;
+  max-width:350px;
+  margin-bottom:21px;
+ }
+
+ .hero-buttons {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+ }
+
+ .hero-buttons .btn {
+  padding:14px 8px;
+  font-size:9px;
+ }
+
+ .hero-meta {
+  font-size:10px;
+  gap:10px;
+  margin-top:24px;
+ }
+
+ .hero-scroll { display:none; }
+
+ .proof-grid { grid-template-columns:1fr; }
+
+ .proof {
+  justify-content:flex-start;
+  padding:14px 6px;
+  border-right:0;
+  border-bottom:1px solid #1715132b;
+ }
+
+ .proof:last-child { border-bottom:0; }
+ .proof b { font-size:19px; }
+
+ section { padding:65px 0; }
+
+ .section-top {
+  display:block;
+  margin-bottom:27px;
+ }
+
+ h2 { font-size:clamp(33px,9vw,43px); }
+
+ .section-intro {
+  font-size:13px;
+  margin-top:15px;
+ }
+
+ .service-grid { grid-template-columns:1fr; }
+
+ .service {
+  min-height:0;
+  padding:22px 20px;
+ }
+
+ .service h3 {
+  font-size:18px;
+  margin:14px 0 7px;
+ }
+
+ .service p { font-size:12px; }
+
+ .how-grid { gap:28px; }
+
+ .how-lead p {
+  font-size:13px;
+  margin:15px 0 20px;
+ }
+
+ .step {
+  grid-template-columns:38px 1fr;
+  padding:18px 0;
+ }
+
+ .step h3 { font-size:13px; }
+ .step p { font-size:12px; }
+
+ .fabrics-grid { gap:25px; }
+
+ .fabrics-intro {
+  font-size:13px;
+  margin:15px 0 20px;
+ }
+
+ .fabric-board {
+  min-height:330px;
+  border-width:8px;
+ }
+
+ .fabric-options article { padding:15px 0; }
+ .fabric-options h3 { font-size:12px; }
+ .fabric-options p { font-size:11px; }
+
+ .portfolio-tools { display:block; }
+
+ .filters {
+  overflow-x:auto;
+  flex-wrap:nowrap;
+  padding-bottom:8px;
+  scrollbar-width:none;
+ }
+
+ .filters::-webkit-scrollbar { display:none; }
+
+ .filter {
+  white-space:nowrap;
+  padding:10px 12px;
+  font-size:10px;
+ }
+
+ .count {
+  display:block;
+  margin-top:7px;
+ }
+
+ .gallery {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+ }
+
+ .gallery-image { aspect-ratio:1/1; }
+
+ .gallery-caption {
+  padding:9px 9px 11px;
+  display:block;
+ }
+
+ .gallery-caption strong {
+  display:block;
+  font-size:9px;
+  line-height:1.3;
+ }
+
+ .gallery-caption span {
+  display:block;
+  margin-top:4px;
+  font-size:9px;
+ }
+
+ .gallery-empty {
+  padding:25px 15px;
+  font-size:12px;
+ }
+
+ .about-visual { min-height:250px; }
+
+ .about-visual:before {
+  width:280px;
+  height:280px;
+ }
+
+ .about-visual:after {
+  width:215px;
+  height:215px;
+ }
+
+ .about-stats { gap:22px; }
+
+ .about-stats strong { font-size:22px; }
+ .about-stats span { font-size:8px; }
+
+ .contact-card { padding:18px; }
+
+ .contact-buttons { grid-template-columns:1fr; }
+
+ .map-wrap iframe { height:220px; }
+
+ .footer-row {
+  align-items:flex-start;
+  flex-direction:column;
+ }
+
+ .wa-float {
+  width:54px;
+  height:54px;
+  right:13px;
+  bottom:78px;
+  padding:0;
+  justify-content:center;
+ }
+
+ .wa-float .label { display:none; }
+
+ .mobile-bar {
+  display:flex;
+  position:fixed;
+  z-index:65;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:8px 10px calc(8px + env(safe-area-inset-bottom));
+  background:#fff;
+  border-top:1px solid var(--line);
+  gap:8px;
+ }
+
+ .mobile-bar a {
+  flex:1;
+  text-align:center;
+  padding:13px 8px;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+ }
+
+ .mobile-bar .phone { background:#eee7dd; }
+ .mobile-bar .quote { background:var(--gold); }
+
+ footer { padding-bottom:100px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+ <div class="wrap">
+  <span><strong>COMFY SEAT</strong> — ATELIER DE TAPISSERIE</span>
+  <span>BARAKI · ALGER · ALGÉRIE</span>
+ </div>
+</div>
+
+<header>
+ <div class="wrap nav">
+
+  <a class="logo" href="#home" aria-label="Comfy Seat">
+   <img src="assets/logo.png" alt="Comfy Seat">
+  </a>
+
+  <nav class="nav-links">
+   <a href="#services" data-fr="Services" data-ar="خدماتنا">Services</a>
+   <a href="#tissus" data-fr="Tissus" data-ar="الأقمشة">Tissus</a>
+   <a href="#realisations" data-fr="Réalisations" data-ar="أعمالنا">Réalisations</a>
+   <a href="#atelier" data-fr="Atelier" data-ar="الورشة">Atelier</a>
+   <a href="#contact" data-fr="Contact" data-ar="اتصل بنا">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+   <button class="lang" id="langBtn">العربية</button>
+   <a class="btn btn-dark nav-quote"
+      href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20souhaite%20un%20devis."
+      data-fr="Devis WhatsApp"
+      data-ar="عرض سعر عبر واتساب">Devis WhatsApp</a>
+  </div>
+
+ </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero no-photo" id="home">
+ <div class="hero-photo"></div>
+
+ <div class="wrap hero-content">
+  <div class="hero-copy">
+
+   <h1
+    data-fr="ON REDONNE<br>VIE À VOTRE<br><span>SALON.</span>"
+    data-ar="نعيد الحياة<br>إلى صالونكم<br><span>من جديد.</span>">
+    ON REDONNE<br>VIE À VOTRE<br><span>SALON.</span>
+   </h1>
+
+   <p
+    data-fr="Fabrication de salons sur mesure et rénovation de canapés, fauteuils et chaises. Un travail adapté à votre intérieur, à vos envies et à votre budget."
+    data-ar="صناعة أرائك حسب الطلب وتجديد الكنب والكراسي. عمل يناسب منزلكم وذوقكم وميزانيتكم.">
+    Fabrication de salons sur mesure et rénovation de canapés, fauteuils et chaises. Un travail adapté à votre intérieur, à vos envies et à votre budget.
+   </p>
+
+   <div class="hero-buttons">
+    <a class="btn btn-gold"
+       href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20souhaite%20un%20devis."
+       data-fr="Demander un devis ↗"
+       data-ar="اطلب عرض سعر ↗">Demander un devis ↗</a>
+
+    <a class="btn btn-line"
+       href="#realisations"
+       data-fr="Voir les réalisations"
+       data-ar="شاهد الأعمال">Voir les réalisations</a>
+   </div>
+
+   <div class="hero-meta">
+    <strong data-fr="11 ANS D’EXPÉRIENCE" data-ar="11 سنة خبرة">11 ANS D’EXPÉRIENCE</strong>
+    <i></i>
+    <span>BARAKI · ALGER</span>
+   </div>
+
+  </div>
+ </div>
+
+ <div class="hero-scroll" data-fr="DÉFILER POUR DÉCOUVRIR ↓" data-ar="اكتشف المزيد ↓">
+  DÉFILER POUR DÉCOUVRIR ↓
+ </div>
+</section>
+
+<!-- QUICK PROOF -->
+
+<div class="quick-proof">
+ <div class="wrap proof-grid">
+  <div class="proof">
+   <b>11+</b>
+   <span data-fr="Années d’expérience" data-ar="سنوات من الخبرة">Années d’expérience</span>
+  </div>
+
+  <div class="proof">
+   <b>01</b>
+   <span data-fr="Devis adapté à chaque projet" data-ar="عرض سعر لكل مشروع">Devis adapté à chaque projet</span>
+  </div>
+
+  <div class="proof">
+   <b>⌖</b>
+   <span data-fr="Atelier à Baraki, Alger" data-ar="ورشة في براقي، الجزائر">Atelier à Baraki, Alger</span>
+  </div>
+ </div>
+</div>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+ <div class="wrap">
+
+  <div class="section-top">
+   <div>
+    <h2
+     data-fr="UN SEUL ATELIER.<br>PLUSIEURS SOLUTIONS."
+     data-ar="ورشة واحدة.<br>حلول متعددة.">
+     UN SEUL ATELIER.<br>PLUSIEURS SOLUTIONS.
+    </h2>
+   </div>
+
+   <p class="section-intro"
+      data-fr="Du salon complet à la chaise de salle à manger, nous étudions votre besoin et vous proposons une solution adaptée."
+      data-ar="من الصالون الكامل إلى كرسي غرفة الطعام، ندرس احتياجكم ونقترح الحل المناسب.">
+    Du salon complet à la chaise de salle à manger, nous étudions votre besoin et vous proposons une solution adaptée.
+   </p>
+  </div>
+
+  <div class="service-grid">
+
+   <article class="service">
+    <span class="num">01 / CRÉATION</span>
+    <span class="plus">↗</span>
+    <h3 data-fr="Salons sur mesure" data-ar="أرائك حسب الطلب">Salons sur mesure</h3>
+    <p data-fr="Fabrication complète selon vos dimensions, votre style et votre espace."
+       data-ar="صناعة كاملة حسب المقاسات والذوق والمساحة.">
+     Fabrication complète selon vos dimensions, votre style et votre espace.
+    </p>
+   </article>
+
+   <article class="service">
+    <span class="num">02 / RÉNOVATION</span>
+    <span class="plus">↗</span>
+    <h3 data-fr="Rénovation de salons" data-ar="تجديد الأرائك">Rénovation de salons</h3>
+    <p data-fr="Tissu, mousse et remise en état pour redonner une seconde vie à votre salon."
+       data-ar="تغيير القماش والإسفنج وإعادة تهيئة الصالون.">
+     Tissu, mousse et remise en état pour redonner une seconde vie à votre salon.
+    </p>
+   </article>
+
+   <article class="service">
+    <span class="num">03 / FAUTEUILS</span>
+    <span class="plus">↗</span>
+    <h3 data-fr="Fauteuils & chaises" data-ar="الكراسي والمقاعد">Fauteuils & chaises</h3>
+    <p data-fr="Réfection de fauteuils individuels et chaises de salle à manger."
+       data-ar="تجديد الكراسي الفردية وكراسي غرفة الطعام.">
+     Réfection de fauteuils individuels et chaises de salle à manger.
+    </p>
+   </article>
+
+   <article class="service">
+    <span class="num">04 / PRO</span>
+    <span class="plus">↗</span>
+    <h3 data-fr="Cafés, restaurants, hôtels" data-ar="المقاهي والمطاعم والفنادق">Cafés, restaurants, hôtels</h3>
+    <p data-fr="Fabrication et rénovation d’assises pour les espaces professionnels."
+       data-ar="صناعة وتجديد مقاعد الفضاءات المهنية.">
+     Fabrication et rénovation d’assises pour les espaces professionnels.
+    </p>
+   </article>
+
+   <article class="service">
+    <span class="num">05 / CONFORT</span>
+    <span class="plus">↗</span>
+    <h3 data-fr="Remplacement de mousse" data-ar="تغيير الإسفنج">Remplacement de mousse</h3>
+    <p data-fr="Remplacement de l’éponge pour retrouver une assise plus confortable."
+       data-ar="تغيير الإسفنج لاستعادة راحة الجلوس.">
+     Remplacement de l’éponge pour retrouver une assise plus confortable.
+    </p>
+   </article>
+
+   <article class="service">
+    <span class="num">06 / FINITIONS</span>
+    <span class="plus">↗</span>
+    <h3 data-fr="Tissu & habillage" data-ar="الأقمشة والتغليف">Tissu & habillage</h3>
+    <p data-fr="Choix du revêtement et finitions selon votre meuble et votre usage."
+       data-ar="اختيار القماش والتشطيبات حسب الأثاث والاستعمال.">
+     Choix du revêtement et finitions selon votre meuble et votre usage.
+    </p>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<!-- FABRIC SELECTION -->
+
+<section class="fabrics" id="tissus">
+ <div class="wrap fabrics-grid">
+
+  <div class="fabrics-copy">
+
+   <h2
+    data-fr="LE TISSU<br>FAIT TOUTE<br>LA DIFFÉRENCE."
+    data-ar="القماش<br>يصنع<br>كل الفرق.">
+    LE TISSU<br>FAIT TOUTE<br>LA DIFFÉRENCE.
+   </h2>
+
+   <p class="fabrics-intro"
+      data-fr="Vous choisissez le rendu, le toucher et le niveau de qualité. Nous vous accompagnons pour trouver le revêtement qui correspond à votre salon, à votre utilisation et à votre budget."
+      data-ar="أنتم تختارون الشكل والملمس ومستوى الجودة. نساعدكم في اختيار القماش المناسب لصالونكم وطريقة استعماله وميزانيتكم.">
+    Vous choisissez le rendu, le toucher et le niveau de qualité. Nous vous accompagnons pour trouver le revêtement qui correspond à votre salon, à votre utilisation et à votre budget.
+   </p>
+
+   <div class="fabric-options">
+
+    <article>
+     <span>01</span>
+     <div>
+      <h3 data-fr="Différents niveaux de qualité" data-ar="مستويات جودة مختلفة">
+       Différents niveaux de qualité
+      </h3>
+      <p
+       data-fr="Des tissus aux caractéristiques et finitions variées, selon les références disponibles."
+       data-ar="أقمشة بمواصفات وتشطيبات متنوعة حسب العينات المتوفرة.">
+       Des tissus aux caractéristiques et finitions variées, selon les références disponibles.
+      </p>
+     </div>
+    </article>
+
+    <article>
+     <span>02</span>
+     <div>
+      <h3 data-fr="Option anti-taches" data-ar="خيار مقاوم للبقع">
+       Option anti-taches
+      </h3>
+      <p
+       data-fr="Des revêtements traités anti-taches peuvent être proposés selon les modèles et la disponibilité."
+       data-ar="يمكن توفير أقمشة معالجة لمقاومة البقع حسب النوع والتوفر.">
+       Des revêtements traités anti-taches peuvent être proposés selon les modèles et la disponibilité.
+      </p>
+     </div>
+    </article>
+
+    <article>
+     <span>03</span>
+     <div>
+      <h3 data-fr="Votre choix, votre projet" data-ar="اختياركم حسب مشروعكم">
+       Votre choix, votre projet
+      </h3>
+      <p
+       data-fr="Comparez les couleurs, les textures et les qualités avant de valider votre tissu."
+       data-ar="قارنوا الألوان والملمس والجودة قبل اختيار القماش النهائي.">
+       Comparez les couleurs, les textures et les qualités avant de valider votre tissu.
+      </p>
+     </div>
+    </article>
+
+   </div>
+
+   <a class="btn btn-dark"
+      href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20voudrais%20voir%20les%20%C3%A9chantillons%20de%20tissus."
+      data-fr="Voir les tissus disponibles ↗"
+      data-ar="شاهدوا عينات الأقمشة ↗">
+    Voir les tissus disponibles ↗
+   </a>
+
+  </div>
+
+  <!-- Replace the image file below with your real fabric sample board photo -->
+
+  <div class="fabric-board" id="fabricBoard">
+
+   <img
+    src="photos/tissus-echantillons.jpg"
+    alt="Échantillons de tissus proposés par Comfy Seat"
+    loading="lazy"
+    onload="this.classList.add('loaded')">
+
+   <div class="fabric-placeholder">
+    <span class="fabric-placeholder-mark">CS</span>
+    <strong data-fr="VOS ÉCHANTILLONS DE TISSUS" data-ar="عينات الأقمشة">
+     VOS ÉCHANTILLONS DE TISSUS
+    </strong>
+    <span
+     data-fr="Emplacement réservé à la photo de votre planche de tissus"
+     data-ar="مكان مخصص لصورة لوحة عينات الأقمشة">
+     Emplacement réservé à la photo de votre planche de tissus
+    </span>
+    <small>photos/tissus-echantillons.jpg</small>
+   </div>
+
+   <div class="fabric-board-label"
+        data-fr="COULEURS · TEXTURES · FINITIONS"
+        data-ar="ألوان · ملمس · تشطيبات">
+    COULEURS · TEXTURES · FINITIONS
+   </div>
+
+  </div>
+
+ </div>
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section class="how">
+ <div class="wrap how-grid">
+
+  <div class="how-lead">
+
+   <h2
+    data-fr="VOTRE DEVIS<br>COMMENCE ICI."
+    data-ar="عرض السعر<br>يبدأ من هنا.">
+    VOTRE DEVIS<br>COMMENCE ICI.
+   </h2>
+
+   <p
+    data-fr="Le plus simple : envoyez des photos du meuble sur WhatsApp. Ajoutez les dimensions approximatives et dites-nous ce que vous souhaitez changer."
+    data-ar="أسهل طريقة: أرسلوا صور الأثاث عبر واتساب، مع المقاسات التقريبية وما ترغبون في تغييره.">
+    Le plus simple : envoyez des photos du meuble sur WhatsApp. Ajoutez les dimensions approximatives et dites-nous ce que vous souhaitez changer.
+   </p>
+
+   <a class="btn btn-dark"
+      href="https://wa.me/213772325705?text=Bonjour%2C%20je%20souhaite%20envoyer%20des%20photos%20pour%20un%20devis."
+      data-fr="Envoyer mes photos ↗"
+      data-ar="إرسال الصور ↗">
+    Envoyer mes photos ↗
+   </a>
+
+  </div>
+
+  <div class="steps">
+
+   <div class="step">
+    <div class="n">01</div>
+    <div>
+     <h3 data-fr="Envoyez vos photos" data-ar="أرسلوا الصور">Envoyez vos photos</h3>
+     <p
+      data-fr="Montrez-nous le meuble sous plusieurs angles, si possible."
+      data-ar="صوروا الأثاث من عدة زوايا إن أمكن.">
+      Montrez-nous le meuble sous plusieurs angles, si possible.
+     </p>
+    </div>
+   </div>
+
+   <div class="step">
+    <div class="n">02</div>
+    <div>
+     <h3 data-fr="Recevez une première estimation" data-ar="احصلوا على تقدير أولي">
+      Recevez une première estimation
+     </h3>
+     <p
+      data-fr="Le prix dépend du modèle, des dimensions, de l’état et des matériaux."
+      data-ar="السعر يتحدد حسب الشكل والمقاسات والحالة والمواد.">
+      Le prix dépend du modèle, des dimensions, de l’état et des matériaux.
+     </p>
+    </div>
+   </div>
+
+   <div class="step">
+    <div class="n">03</div>
+    <div>
+     <h3 data-fr="Confirmez les détails" data-ar="اتفقوا على التفاصيل">Confirmez les détails</h3>
+     <p
+      data-fr="Dépôt, récupération ou livraison : les modalités sont convenues ensemble."
+      data-ar="يتم الاتفاق على طريقة الإيداع والاسترجاع أو التوصيل.">
+      Dépôt, récupération ou livraison : les modalités sont convenues ensemble.
+     </p>
+    </div>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="realisations">
+ <div class="wrap">
+
+  <div class="section-top">
+   <div>
+    <h2
+     data-fr="LE RÉSULTAT<br>PARLE DE LUI-MÊME."
+     data-ar="النتيجة<br>تتحدث عن نفسها.">
+     LE RÉSULTAT<br>PARLE DE LUI-MÊME.
+    </h2>
+   </div>
+
+   <p class="section-intro"
+      data-fr="Des photos réelles de l’atelier : créations neuves, rénovations et détails de finition. Faites défiler et découvrez le travail."
+      data-ar="صور حقيقية من الورشة: صناعة جديدة وتجديد وتفاصيل التشطيب. تصفحوا الأعمال واكتشفوا الجودة.">
+    Des photos réelles de l’atelier : créations neuves, rénovations et détails de finition. Faites défiler et découvrez le travail.
+   </p>
+  </div>
+
+  <div class="portfolio-tools">
+
+   <div class="filters" id="filters">
+    <button class="filter active" data-filter="all" data-fr="TOUT" data-ar="الكل">TOUT</button>
+    <button class="filter" data-filter="Salons neufs" data-fr="SALONS NEUFS" data-ar="أرائك جديدة">SALONS NEUFS</button>
+    <button class="filter" data-filter="Rénovation" data-fr="RÉNOVATION" data-ar="تجديد">RÉNOVATION</button>
+    <button class="filter" data-filter="Fauteuils & chaises" data-fr="FAUTEUILS & CHAISES" data-ar="كراسي">FAUTEUILS & CHAISES</button>
+    <button class="filter" data-filter="Professionnels" data-fr="PRO" data-ar="مهني">PRO</button>
+   </div>
+
+   <span class="count" id="photoCount"></span>
+  </div>
+
+  <div class="gallery" id="gallery">
+   <div class="gallery-empty">
+    <strong data-fr="LES RÉALISATIONS ARRIVENT ICI" data-ar="أعمال الورشة تظهر هنا">
+     LES RÉALISATIONS ARRIVENT ICI
+    </strong>
+    <span
+     data-fr="Ajoutez les photos de vrais projets dans le dossier photos. La galerie gardera automatiquement le même format pour chaque image."
+     data-ar="أضيفوا صور المشاريع الحقيقية في مجلد photos. سيحافظ المعرض تلقائياً على نفس مقاس كل الصور.">
+     Ajoutez les photos de vrais projets dans le dossier photos. La galerie gardera automatiquement le même format pour chaque image.
+    </span>
+    <small>photos.json · guide dans le ZIP</small>
+   </div>
+  </div>
+
+  <div class="portfolio-bottom">
+   <a class="btn btn-gold"
+      href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20souhaite%20voir%20vos%20réalisations."
+      data-fr="Demander plus de photos ↗"
+      data-ar="اطلبوا المزيد من الصور ↗">
+    Demander plus de photos ↗
+   </a>
+  </div>
+
+ </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="atelier">
+ <div class="wrap about-grid">
+
+  <div class="about-visual">
+   <img class="about-logo" src="assets/logo.png" alt="Comfy Seat">
+  </div>
+
+  <div class="about-text">
+
+   <h2
+    data-fr="11 ANS DE MÉTIER. LE GOÛT DU TRAVAIL BIEN FAIT."
+    data-ar="11 سنة من الخبرة. وإتقان في العمل.">
+    11 ANS DE MÉTIER. LE GOÛT DU TRAVAIL BIEN FAIT.
+   </h2>
+
+   <p
+    data-fr="Comfy Seat accompagne vos projets de fabrication et de rénovation de salons et d’assises à Baraki, Alger. Chaque demande est étudiée selon le meuble, son état, ses dimensions et les matériaux souhaités. Le but : trouver la solution qui convient vraiment à votre projet."
+    data-ar="ترافقكم Comfy Seat في مشاريع صناعة وتجديد الأرائك والمقاعد في براقي، الجزائر. ندرس كل طلب حسب نوع الأثاث وحالته ومقاساته والمواد المطلوبة، لنقترح الحل الأنسب لمشروعكم.">
+    Comfy Seat accompagne vos projets de fabrication et de rénovation de salons et d’assises à Baraki, Alger. Chaque demande est étudiée selon le meuble, son état, ses dimensions et les matériaux souhaités. Le but : trouver la solution qui convient vraiment à votre projet.
+   </p>
+
+   <div class="about-stats">
+    <div>
+     <strong>11+</strong>
+     <span data-fr="Ans d’expérience" data-ar="سنة خبرة">Ans d’expérience</span>
+    </div>
+    <div>
+     <strong>100%</strong>
+     <span data-fr="Devis personnalisé" data-ar="عرض سعر مخصص">Devis personnalisé</span>
+    </div>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+ <div class="wrap contact-grid">
+
+  <div class="contact-left">
+
+   <h2 data-fr="ON EN PARLE ?" data-ar="لنتحدث عن مشروعكم؟">
+    ON EN PARLE ?
+   </h2>
+
+   <p
+    data-fr="Vous avez un salon à fabriquer, un canapé à rénover ou des chaises à refaire ? Écrivez-nous directement. Pour gagner du temps, joignez quelques photos à votre message."
+    data-ar="هل تريدون صناعة صالون أو تجديد أريكة أو إصلاح كراسي؟ راسلونا مباشرة وأرفقوا بعض الصور لتسهيل التقدير.">
+    Vous avez un salon à fabriquer, un canapé à rénover ou des chaises à refaire ? Écrivez-nous directement. Pour gagner du temps, joignez quelques photos à votre message.
+   </p>
+
+   <a class="btn btn-dark"
+      href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20j'ai%20un%20projet."
+      data-fr="Écrire à l’atelier ↗"
+      data-ar="راسلوا الورشة ↗">
+    Écrire à l’atelier ↗
+   </a>
+
+  </div>
+
+  <div>
+
+   <div class="contact-card">
+
+    <div class="contact-line">
+     <div class="contact-symbol">☎</div>
+     <div>
+      <b data-fr="Téléphone & WhatsApp" data-ar="الهاتف وواتساب">Téléphone & WhatsApp</b>
+      <a href="tel:+213772325705">0772 32 57 05</a>
+     </div>
+    </div>
+
+    <div class="contact-line">
+     <div class="contact-symbol">⌖</div>
+     <div>
+      <b data-fr="Adresse" data-ar="العنوان">Adresse</b>
+      <span>Baraki, Alger, Algérie</span>
+     </div>
+    </div>
+
+    <div class="contact-line">
+     <div class="contact-symbol">↗</div>
+     <div>
+      <b data-fr="Zone de service" data-ar="منطقة العمل">Zone de service</b>
+      <span
+       data-fr="Alger et environs — transport à convenir selon le projet."
+       data-ar="الجزائر وضواحيها — يتم الاتفاق على النقل حسب المشروع.">
+       Alger et environs — transport à convenir selon le projet.
+      </span>
+     </div>
+    </div>
+
+    <div class="contact-buttons">
+     <a class="btn btn-gold" href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat">WHATSAPP ↗</a>
+     <a class="btn btn-dark" href="tel:+213772325705" data-fr="APPELER" data-ar="اتصال">APPELER</a>
+    </div>
+
+   </div>
+
+   <div class="map-wrap">
+
+    <iframe
+     title="Carte de Baraki, Alger"
+     src="https://maps.google.com/maps?q=Baraki%2C%20Alger%2C%20Alg%C3%A9rie&z=14&output=embed"
+     loading="lazy"
+     referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <a class="map-directions"
+       href="https://maps.app.goo.gl/AYiG49ZFpeKjAaPr6"
+       target="_blank"
+       rel="noopener">
+     <span
+      data-fr="OUVRIR L’EMPLACEMENT EXACT · ITINÉRAIRE GOOGLE MAPS"
+      data-ar="افتح الموقع الدقيق · الاتجاهات عبر خرائط Google">
+      OUVRIR L’EMPLACEMENT EXACT · ITINÉRAIRE GOOGLE MAPS
+     </span>
+     <span>↗</span>
+    </a>
+
+   </div>
+
+  </div>
+ </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+ <div class="wrap footer-row">
+  <img class="footer-logo" src="assets/logo.png" alt="Comfy Seat">
+  <small>© <span id="year"></span> COMFY SEAT · BARAKI, ALGER</small>
+ </div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+
+<a class="wa-float"
+   href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20souhaite%20un%20devis."
+   target="_blank"
+   rel="noopener"
+   aria-label="WhatsApp Comfy Seat">
+
+ <svg viewBox="0 0 32 32">
+  <path d="M16 .8A15 15 0 0 0 3.1 23.5L1 31l7.7-2A15.1 15.1 0 1 0 16 .8zm0 27.4c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.5 1.2 1.2-4.4-.3-.5A12.3 12.3 0 1 1 16 28.2zm6.8-9.2c-.4-.2-2.2-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.3-2.9-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.8 4.3 6.8 6 .9.4 1.6.6 2.1.7.9.3 1.8.2 2.4.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5z"/>
+ </svg>
+
+ <span class="label">WhatsApp</span>
+</a>
+
+<!-- MOBILE CONTACT BAR -->
+
+<div class="mobile-bar">
+ <a class="phone" href="tel:+213772325705" data-fr="APPELER" data-ar="اتصال">APPELER</a>
+ <a class="quote"
+    href="https://wa.me/213772325705?text=Bonjour%20Comfy%20Seat%2C%20je%20souhaite%20un%20devis."
+    data-fr="DEVIS WHATSAPP"
+    data-ar="عرض سعر واتساب">DEVIS WHATSAPP</a>
+</div>
+
+<!-- IMAGE LIGHTBOX -->
+
+<div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+ <button id="lightboxClose" aria-label="Fermer">×</button>
+ <img id="lightboxImg" alt="">
+</div>
+
+<script>
+const $ = (s,root=document) => root.querySelector(s);
+const $$ = (s,root=document) => [...root.querySelectorAll(s)];
+
+let currentLang = 'fr';
+let photoItems = [];
+let activeFilter = 'all';
+
+const langBtn = $('#langBtn');
+const gallery = $('#gallery');
+
+function setLanguage(lang) {
+ currentLang = lang;
+
+ document.documentElement.lang = lang;
+ document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+ $$('[data-fr][data-ar]').forEach(el => {
+  el.innerHTML = el.dataset[lang];
+ });
+
+ langBtn.textContent = lang === 'fr' ? 'العربية' : 'Français';
+
+ renderGallery(activeFilter);
+}
+
+langBtn.addEventListener('click', () => {
+ setLanguage(currentLang === 'fr' ? 'ar' : 'fr');
+});
+
+$('#year').textContent = new Date().getFullYear();
+
+/* GALLERY */
+
+function safe(value) {
+ return String(value ?? '').replace(/[&<>"']/g, char => ({
+  '&':'&amp;',
+  '<':'&lt;',
+  '>':'&gt;',
+  '"':'&quot;',
+  "'":'&#39;'
+ }[char]));
+}
+
+function renderGallery(filter='all') {
+ const items = photoItems.filter(item =>
+  filter === 'all' || item.category === filter
+ );
+
+ $('#photoCount').textContent = currentLang === 'fr'
+  ? `${items.length} réalisation${items.length>1?'s':''}`
+  : `${items.length} أعمال`;
+
+ if (!items.length) {
+  gallery.innerHTML = `
+   <div class="gallery-empty">
+    <strong>
+     ${currentLang === 'fr'
+      ? 'LES PHOTOS DE CETTE CATÉGORIE ARRIVENT BIENTÔT'
+      : 'صور هذا التصنيف ستضاف قريباً'}
+    </strong>
+    ${currentLang === 'fr'
+     ? 'Ajoutez vos réalisations dans photos.json.'
+     : 'أضيفوا أعمالكم في ملف photos.json.'}
+   </div>`;
+  return;
+ }
+
+ gallery.innerHTML = items.map(p => `
+  <figure class="gallery-card" tabindex="0" role="button"
+   aria-label="Voir ${safe(p.title || 'réalisation')}">
+   <img class="gallery-image"
+    loading="lazy"
+    src="${safe(p.src)}"
+    alt="${safe(p.alt || p.title || 'Réalisation Comfy Seat')}">
+   <figcaption class="gallery-caption">
+    <strong>${safe(p.title || 'Comfy Seat')}</strong>
+    <span>${safe(p.category || '')}</span>
+   </figcaption>
+  </figure>
+ `).join('');
+
+ $$('.gallery-card',gallery).forEach((card,i) => {
+  const open = () => openLightbox(items[i]);
+
+  card.addEventListener('click',open);
+
+  card.addEventListener('keydown',e => {
+   if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    open();
+   }
+  });
+ });
+}
+
+/* GALLERY FILTERS */
+
+$$('.filter').forEach(btn => {
+ btn.addEventListener('click',() => {
+  $$('.filter').forEach(b => b.classList.remove('active'));
+
+  btn.classList.add('active');
+  activeFilter = btn.dataset.filter;
+
+  renderGallery(activeFilter);
+ });
+});
+
+/* LIGHTBOX */
+
+const lightbox = $('#lightbox');
+
+function openLightbox(photo) {
+ $('#lightboxImg').src = photo.src;
+ $('#lightboxImg').alt = photo.alt || photo.title || '';
+
+ lightbox.classList.add('open');
+ document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+ lightbox.classList.remove('open');
+ document.body.style.overflow = '';
+}
+
+$('#lightboxClose').addEventListener('click',closeLightbox);
+
+lightbox.addEventListener('click',e => {
+ if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown',e => {
+ if (e.key === 'Escape') closeLightbox();
+});
+
+/* LOAD PHOTOS AND HERO */
+
+fetch('photos.json')
+ .then(response => {
+  if (!response.ok) throw new Error('photos.json not found');
+  return response.json();
+ })
+ .then(data => {
+  photoItems = Array.isArray(data.items) ? data.items : [];
+
+  const heroPath = data.hero || 'photos/hero.jpg';
+  const hero = new Image();
+
+  hero.onload = () => {
+   $('.hero-photo').style.backgroundImage = `
+    linear-gradient(90deg,rgba(13,12,11,.88) 0%,rgba(13,12,11,.64) 42%,rgba(13,12,11,.10) 100%),
+    linear-gradient(0deg,rgba(10,9,8,.58),transparent 55%),
+    url("${heroPath}")`;
+
+   $('.hero').classList.remove('no-photo');
+  };
+
+  hero.onerror = () => {};
+
+  hero.src = heroPath;
+
+  renderGallery();
+ })
+ .catch(() => renderGallery());
+
+/* SCROLL ANIMATION */
+
+if ('IntersectionObserver' in window) {
+ const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+   if (entry.isIntersecting) {
+    entry.target.classList.add('visible');
+    observer.unobserve(entry.target);
+   }
+  });
+ },{threshold:.12});
+
+ $$('.service,.step,.about-text,.contact-card,.fabric-options article')
+  .forEach(el => {
+   el.classList.add('reveal');
+   observer.observe(el);
+  });
+}
+</script>
+
+</body>
+</html>
